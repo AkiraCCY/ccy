@@ -37,10 +37,8 @@ $columns = array(
         'db'        => 'member_id',
         'dt'        => 4,
         'formatter' => function( $d, $row ) {
-           return "
-           <button type'button' onclick='editRow($d)' class='btn btn-outline-danger' data-toggle='model' data-target='#exampleModal' data-whatever='@mdo'>open model for @mdo</button>
-       <button  type='button' onclick='deleteRow($d)' class='btn btn-outline-danger btn-fw'>Delete</button>";
-           
+            return '<button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#exampleModal" data-whatever="'.$d.'">Edit</button>  <button onclick="deleteRow('.$d.')" class="btn btn-sm btn-danger">Delete</button>';
+         
             }
     )
     // array(
