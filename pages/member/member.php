@@ -28,7 +28,7 @@
   <!-- endinject -->
   <link rel="shortcut icon" href="../../images/favicon.png" />
   <style>
-tr {text-align: center;}
+
 </style>
 </head>
 
@@ -460,8 +460,7 @@ tr {text-align: center;}
                   
                 </div>
 
-                
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -474,26 +473,26 @@ tr {text-align: center;}
               <form>
 
                 <div class="form-group">
-                  <label for="first_name" class="col-form-label">First name:</label>
-                  <input type="text" class="form-control" id="first_name">
+                  <label for="m_name" class="col-form-label">name:</label>
+                  <input type="text" class="form-control" id="m_name">
                 </div>
 
                 <div class="form-group">
-                    <label for="last_name" class="col-form-label">Last name:</label>
-                    <input type="text" class="form-control" id="last_name">
+                    <label for="m_email" class="col-form-label">email:</label>
+                    <input type="text" class="form-control" id="m_email">
                 </div>
                 
                 <div class="form-group">
-                    <label for="email" class="col-form-label">Email:</label>
-                    <input type="text" class="form-control" id="email">
+                    <label for="m_tel" class="col-form-label">telophon:</label>
+                    <input type="text" class="form-control" id="m_tel">
                   </div>
 
                 <div class="form-group">
-                    <label for="position" class="col-form-label">Position:</label>
-                    <input type="text" class="form-control" id="position">
+                    <label for="m_address" class="col-form-label">address:</label>
+                    <input type="text" class="form-control" id="m_address">
                 </div>
 
-                <input type="hidden" id="employee_id">
+                <input type="hidden" id="member_id">
 
               </form>
             </div>
@@ -604,40 +603,63 @@ if(name != '' && email != '' && telophon != '' && address != ''){
 }else{
   alert('กรุณากรอกข้อมูลให้ครบ');
 }
-$('#exampleModal').on('show.bs.modal', function (event) {
-  var button = $(event.relatedTarget) // Button that triggered the modal
-  var recipient = button.data('whatever') // Extract info from data-* attributes
-  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-  var modal = $(this)
-  modal.find('.modal-title').text('New message to ' + recipient)
-  modal.find('.modal-body input').val(recipient)
-})
 }
 
-// function editRow(){
-
-// var id = $('#employee_id').val();
-// var first_name = $('#first_name').val();
-// var last_name = $('#last_name').val();
-// var email = $('#email').val();
-// var position = $('#position').val();
-
-//     $.ajax({
-//         url:'update.php',
-//         method: 'POST',
-//         data: {id:id,first_name:first_name,last_name:last_name,email:email,position:position},
-//         success:function(data){
-     
-//           alert('บันทึกข้อมูลเสร็จเรียบร้อยแล้ว')
-//           $('#example').DataTable().draw()
-//           $('#exampleModal').modal('toggle');
-
-//         }
-//       })
+$('#exampleModal').on('show.bs.modal', function (event) {
 
 
-// }
+var button = $(event.relatedTarget) // Button that triggered the modal
+var id = button.data('whatever') // Extract info from data-* attributes
+// If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+// Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+var modal = $(this)
+// modal.find('.modal-title').text('New message to ' + recipient)
+// modal.find('.modal-body input').val(recipient)
+
+$('#member_id').val(id);
+
+  $.ajax({
+      url:'select-data.php',
+      method: 'POST',
+      data: {id:id},
+      success:function(data){
+        
+        var json = $.parseJSON(data);
+        $("#m_name").val(json[0].m_name);
+        $("#m_email").val(json[0].m_email);
+        $("#m_tel").val(json[0].m_tel);
+        $("#m_address").val(json[0].m_address);
+
+      }
+    })
+
+
+})
+
+function editRow(){
+
+var id = $('#employee_id').val();
+var first_name = $('#first_name').val();
+var last_name = $('#last_name').val();
+var email = $('#email').val();
+var position = $('#position').val();
+
+  $.ajax({
+      url:'update.php',
+      method: 'POST',
+      data: {id:id,first_name:first_name,last_name:last_name,email:email,position:position},
+      success:function(data){
+   
+        alert('บันทึกข้อมูลเสร็จเรียบร้อยแล้ว')
+        $('#example').DataTable().draw()
+        $('#exampleModal').modal('toggle');
+
+      }
+    })
+
+
+}
+
 
     </script>
     <!-- enddata table -->
