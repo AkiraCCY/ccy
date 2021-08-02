@@ -13,7 +13,7 @@
    <link rel="stylesheet" href="../../vendors/datatables.net/semantic.min.css">
   <link rel="stylesheet" href="../../vendors/datatables.net/dataTables.semantic.min.css">
   
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
 
   <link rel="stylesheet" href="../../vendors/feather/feather.css">
@@ -523,6 +523,7 @@
     </div>
     <!-- page-body-wrapper ends -->
   </div>
+  
   <!-- container-scroller -->
   <!-- plugins:js -->
   <script src="../../vendors/js/vendor.bundle.base.js"></script>
@@ -541,7 +542,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <!-- Endbootstrp -->
     <!-- data table -->
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script  type="text/javascript" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.25/js/dataTables.semanticui.min.js"></script>
@@ -623,14 +623,16 @@ $('#member_id').val(id);
       method: 'POST',
       data: {id:id},
       success:function(data){
-        
-        var json = $.parseJSON(data);
-        $("#m_name").val(json[0].m_name);
-        $("#m_email").val(json[0].m_email);
-        $("#m_tel").val(json[0].m_tel);
-        $("#m_address").val(json[0].m_address);
 
-      }
+    var json = $.parseJSON(data);
+      alert(json[0].m_email)
+        
+        // $("#m_name").val(json[0].m_name);
+        // $("#m_email").val(json[0].m_email);
+        // $("#m_tel").val(json[0].m_tel);
+        // $("#m_address").val(json[0].m_address);
+
+      }   
     })
 
 
@@ -664,6 +666,3 @@ var position = $('#position').val();
     </script>
     <!-- enddata table -->
     
-</body>
-
-</html> 
