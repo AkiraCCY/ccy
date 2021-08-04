@@ -623,7 +623,7 @@ $('#member_id').val(id);
       method: 'POST',
       data: {id:id},
       success:function(data){
-
+        alert(data) 
     var json = $.parseJSON(data);
       alert(json[0].m_email)
         
