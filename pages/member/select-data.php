@@ -13,5 +13,5 @@ echo json_encode($arr);
 
 mysqli_free_result($rs);
 mysqli_close($connect);
-$mysqli->query() or die ( $mysqli->error );
+// $mysqli->query() or die ( $mysqli->error );
 ?>

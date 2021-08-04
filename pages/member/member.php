@@ -14,7 +14,12 @@
   <link rel="stylesheet" href="../../vendors/datatables.net/dataTables.semantic.min.css">
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
+<style>
+    table.dataTable thead{
+        background: linear-gradient(to right, #fcb845, #fd1d1d, #833ab4);
+        color:white;
+    }
+  </style>
 
   <link rel="stylesheet" href="../../vendors/feather/feather.css">
   <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
@@ -510,6 +515,7 @@
         <!-- content-wrapper ends -->
         <!-- partial:../../partials/_footer.html -->
         <footer class="footer">
+          
           <div class="d-sm-flex justify-content-center justify-content-sm-between">
             <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2021.  Premium <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a> from BootstrapDash. All rights reserved.</span>
             <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="ti-heart text-danger ml-1"></i></span>
@@ -623,14 +629,13 @@ $('#member_id').val(id);
       method: 'POST',
       data: {id:id},
       success:function(data){
-        alert(data) 
-    var json = $.parseJSON(data);
-      alert(json[0].m_email)
+
+        var json = jQuery.parseJSON( data );
         
-        // $("#m_name").val(json[0].m_name);
-        // $("#m_email").val(json[0].m_email);
-        // $("#m_tel").val(json[0].m_tel);
-        // $("#m_address").val(json[0].m_address);
+        $("#m_name").val(json[0].m_name);
+        $("#m_email").val(json[0].m_email);
+        $("#m_tel").val(json[0].m_tel);
+        $("#m_address").val(json[0].m_address);
 
       }   
     })
@@ -640,21 +645,21 @@ $('#member_id').val(id);
 
 function editRow(){
 
-var id = $('#employee_id').val();
-var first_name = $('#first_name').val();
-var last_name = $('#last_name').val();
-var email = $('#email').val();
-var position = $('#position').val();
+var id = $('#member_id').val();
+var m_name = $('#m_name').val();
+var m_email = $('#m_email').val();
+var m_tel = $('#m_tel').val();
+var m_address = $('#m_address').val();
 
   $.ajax({
       url:'update.php',
       method: 'POST',
-      data: {id:id,first_name:first_name,last_name:last_name,email:email,position:position},
+      data: {id:id,m_name:m_name,m_email:m_email,m_tel:m_tel,m_address:m_address},
       success:function(data){
    
         alert('บันทึกข้อมูลเสร็จเรียบร้อยแล้ว')
         $('#example').DataTable().draw()
-        $('#exampleModal').modal('toggle');
+        location.reload();
 
       }
     })
