@@ -34,33 +34,70 @@
     <div class="col-md-12">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <h5 class="modal-title" id="exampleModalLabel">สมัครสมาชิก</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-  <div class="container-fluid">
+    <div class="container">
     
     
       <div class="col-bg-12">
         <div class="row">
-          <div class="col-8 col-sm-6">
-          <label for="exampleInputMobile" class="col-sm-3 col-form-label">Mobile</label>
-         <div class="col-sm-12">
-            <input type="text" class="form-control" id="exampleInputMobile" placeholder="Mobile number">
-         </div>
-          </div>
-          <div class="col-8 col-sm-6">
-          <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Email</label>
-         <div class="col-sm-12">
-          <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email">
-         </div>
-          </div>
-        </div>
+       
+          <div class="form-group">
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="">
+                            นาย
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+                            นาง
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option3">
+                            นางสาว
+                          </label>
+                        </div>
+                      </div>
+         <div class="col-8 col-sm-4">
+              <label for="exampleInputMobile" class="col-sm-3 col-form-label">ชื่อ</label>
+              <div class="col-sm-12">
+              <input type="text" class="form-control" id="exampleInputMobile" placeholder="Name">
+               </div>
+           </div>
+            <div class="col-8 col-sm-4">
+            <label for="exampleInputEmail2" class="col-sm-3 col-form-label">นามสกุล</label>
+              <div class="col-sm-12">
+               <input type="text" class="form-control" id="exampleInputEmail2" placeholder="LastName">
+              </div>
+            </div>
+           </div> 
       
-    
+      <div class="col-bg-12">
+        <div class="row">  
+        <div class="col-8 col-sm-6">
+              <label for="exampleInputMobile" class="col-sm-3 col-form-label">ชื่อ</label>
+              <div class="col-sm-12">
+              <input type="text" class="form-control" id="exampleInputMobile" placeholder="Name">
+               </div>
+           </div>
+        <div class="col-8 col-sm-6">
+              <label for="exampleInputMobile" class="col-sm-3 col-form-label">ชื่อ</label>
+              <div class="col-sm-12">
+              <input type="text" class="form-control" id="exampleInputMobile" placeholder="Name">
+               </div>
+           </div>
 </div>
+</div>
+    
+
 </div>
   </div>
 </div>
