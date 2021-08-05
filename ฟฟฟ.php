@@ -42,7 +42,9 @@
       <div class="modal-body">
     <div class="container">
     
-    
+    <label for="salary">Enter your salary:</label>
+<input type="text" id="salary" name="salary"
+    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
       <div class="col-bg-12">
         <div class="row">
        

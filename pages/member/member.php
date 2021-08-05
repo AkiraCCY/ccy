@@ -488,9 +488,10 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="m_tel" class="col-form-label">telophon:</label>
-                    <input type="text" class="form-control" id="m_tel">
-                  </div>
+                     <label for="m_tel" class="col-form-label">telophon</label>
+                    <input type="text" id="m_tel" name="salary" class="form-control" maxlength="10"
+                     oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />  
+                </div>
 
                 <div class="form-group">
                     <label for="m_address" class="col-form-label">address:</label>
