@@ -2,6 +2,24 @@
 <html lang="en">
 
 <head>
+<style>
+		.content {display:none;}
+		.preload { width:100px;
+			height: 200px;
+			position: fixed;
+			top: 30%;
+			left: 45%;
+		}
+		</style>
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+		<script>
+		$(function() {
+			$(".preload").fadeOut(1500, 
+		function() {
+			$(".content").fadeIn(500);
+		});
+		});
+		</script>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -38,6 +56,8 @@
 </head>
 
 <body>
+<div class="preload"><img src="../../images/Preloader.gif"> </div>
+		<div class="content">
   <div class="container-scroller">
     <!-- partial:../../partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
@@ -509,9 +529,10 @@
           </div>
         </div>
       </div>
-
-                
-  
+      
+      </div>            
+      </body>
+      </html>
            
         <!-- content-wrapper ends -->
         <!-- partial:../../partials/_footer.html -->
