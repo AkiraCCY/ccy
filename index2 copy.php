@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php
-$p_id = $_GET["id"];
-?>
-
 
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>CC-Y</title>
-  
   <?php
    include_once('link.php')
  ?>  
+ <?php
+$p_id = $_GET["id"];
+?>
 
 </head>
 <body>
  
- <?php
+<?php
    include_once('navbar.html')
  ?>  
  <?php
@@ -35,9 +33,25 @@ $p_id = $_GET["id"];
       
       ?>
       <?php foreach ($result as $row) {?>
+ <?php
+   include_once('navbar.html')
+ ?>   
      
       <!-- คำนำ -->
       <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-md-12 grid-margin">
+              <div class="row">
+                <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+                  <h3 class="font-weight-bold">ยินดีต้อนรับสู่ร้าน ตี๋การช่าง</h3>
+                  <h6 class="font-weight-normal mb-0">จำหน่ายสินค้า อะไหล่รถจักรยานยนต์ </h6>
+                </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="main-panel">
         <div class="content-wrapper">
           <div class="row">
             <div class="col-md-12 grid-margin">
@@ -120,9 +134,6 @@ $p_id = $_GET["id"];
                   </p>
           </div>
         </div>
-
-
-          
         <!-- content-wrapper ends -->
         <!-- partial:partials/_footer.html -->
         <footer class="footer">
@@ -153,3 +164,4 @@ $p_id = $_GET["id"];
 </body>
 
 </html>
+
