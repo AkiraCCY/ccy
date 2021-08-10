@@ -3,6 +3,39 @@
 
 <head>
 <style>
+
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:after {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  left: 8px;
+  display: block;
+  font-family: 'Glyphicons Halflings';
+  opacity: 0;
+}
+table.dataTable thead .sorting:after {
+  opacity: 0;
+    /* sort */
+}
+table.dataTable thead .sorting:before {
+  opacity: 0;
+  
+  /* sort */
+}
+table.dataTable thead .sorting_asc:after {
+  content: "\e155";
+  /* sort-by-attributes */
+}
+table.dataTable thead .sorting_desc:after {
+  content: "\e156";
+  /* sort-by-attributes-alt */
+}
+
+
 		.content {display:none;}
 		.preload { width:100px;
 			height: 200px;
@@ -10,7 +43,8 @@
 			top: 30%;
 			left: 45%;
 		}
-		</style>
+  
+</style>
 		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 		<script>
 		$(function() {
@@ -29,8 +63,7 @@
  
   <!-- css data table -->
    <link rel="stylesheet" href="../../vendors/datatables.net/semantic.min.css">
-  <link rel="stylesheet" href="../../vendors/datatables.net/dataTables.semantic.min.css">
-  
+   <link rel="stylesheet" href="../../vendors/datatables.net/dataTables.semanticui.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 <style>
     table.dataTable thead{
@@ -332,7 +365,7 @@
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="../../index.html">
+            <a class="nav-link" href="../../index.php">
               <i class="icon-grid menu-icon"></i>
               <span class="menu-title">Dashboard</span>
             </a>
@@ -459,7 +492,7 @@
                   
                 </div>
 
-                <div class="row">
+                <div class="row" >
                   <div class="col-md-12">
                     <div class="card-body">
                     <table id="example" class="ui celled table" style="width:100%" >
@@ -467,7 +500,7 @@
 
             <tr >
                 <th>Name</th>
-                <th>Email</th>
+                <th> Email</th>
                 <th>telophon</th>
                 <th>address</th>
                 <th>Delete</th>
@@ -579,7 +612,9 @@
       "aaSorting" :[[0,'desc']],
         "processing": true,
         "serverSide": true,
-        "ajax": "server_processing.php"
+        "ajax": "server_processing.php",
+       
+   
     } );
 } );
     </script>
@@ -691,5 +726,6 @@ var m_address = $('#m_address').val();
 
 
     </script>
+  
     <!-- enddata table -->
     
