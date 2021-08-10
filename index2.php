@@ -66,7 +66,7 @@
                 <h5 class="card-title">สินค้า A</h5>
                 <p class="card-text">บลาๆๆๆๆๆ</p>
                 <p class="card-text">9,999</p>
-                <a href="#" class="btn btn-primary">เลือก</a>
+                <a href="product.php?id=4" class="btn btn-primary">เลือก</a>
               </div>
             </div>
             

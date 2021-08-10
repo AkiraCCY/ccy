@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
+
+include_once('condb.php');
 $p_id = $_GET["id"];
 ?>
 
@@ -12,23 +14,21 @@ $p_id = $_GET["id"];
   <title>CC-Y</title>
   
   <?php
-   include_once('link.php')
+   include_once('link.php');
  ?>  
 
 </head>
 <body>
  
  <?php
-   include_once('navbar.html')
+   include_once('navbar.html');
  ?>  
- <?php
-   include_once('condb.php')
- ?>  
+  
 
 <?php
       $sql = "SELECT * FROM tbl_product as p 
               INNER JOIN tbl_type  as t ON p.type_id=t.type_id 
-               WHERE p_id = $p_id ";
+               WHERE p_id =$p_id";
       $result = mysqli_query($con, $sql) or die ("Error in query: $sql " . mysqli_error());
       $row = mysqli_fetch_array($result);
 
@@ -53,7 +53,7 @@ $p_id = $_GET["id"];
     
 <form  action="checklogin_detail.php?id=<?php echo $p_id ?>" method="post">        
   <div class="row text-left ">
-  <div class="col-md-2"></div>
+  
               <div class="col-md-10"><br><br>
                   <div class="container"   >
                     <div class="row">
@@ -94,22 +94,23 @@ $p_id = $_GET["id"];
                         <input type="submit"onclick="document.getElementById('id83').style.display='block'" name="add_to_cart"  class="btn btn-outline-success btn-lg" value="ตะกร้าสินค้า" >
                        
                        </p>
-                        
+                      
                        <table class="table table-bordered table-striped">
-
+                       
 <thead>
                                 <tr>
                                     <th>รายละเอียดสินค้า</th>
                                    
                                 </tr>
                             </thead>
-   <td><?php echo $row['p_detail'] ?></td>
+                            
+   <td><?php echo $row['p_detail'] ?></td> 
   </table>
   
-  
+ 
   
   </td>
-
+ 
                       </div>
                       </div>
                       </div>
