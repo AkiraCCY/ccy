@@ -6,8 +6,8 @@ date_default_timezone_set('Asia/bangkok');
 
 $type_id = $_POST["id"];
 
-//ลบข้อมูลออกจาก database ตาม member_id ที่ส่งมา
 
-$sql = "DELETE FROM tbl_type WHERE member_id='$type_id' ";
+
+$sql = "DELETE FROM tbl_type WHERE type_id='$type_id' ";
 $result = mysqli_query($con, $sql) or die ("Error in query: $sql " . mysqli_error($con));
 ?>

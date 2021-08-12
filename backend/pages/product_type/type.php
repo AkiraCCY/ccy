@@ -108,7 +108,7 @@ table.dataTable thead .sorting_desc:after {
                     <div class="template-demo">
                         <button onclick="addRow()" type="button" class="btn btn-info btn-icon-text">
                           <i class="ti-upload btn-icon-prepend"></i>                                                    
-                          add member
+                          add product type
                         </button>
                         </div>    
                     </div>
@@ -153,27 +153,17 @@ table.dataTable thead .sorting_desc:after {
               <form>
 
                 <div class="form-group">
-                  <label for="m_name" class="col-form-label">name:</label>
-                  <input type="text" class="form-control" id="m_name">
+                  <label for="type_code" class="col-form-label">type_code:</label>
+                  <input type="text" class="form-control" id="type_code">
                 </div>
 
                 <div class="form-group">
-                    <label for="m_email" class="col-form-label">email:</label>
-                    <input type="text" class="form-control" id="m_email">
+                    <label for="type_name" class="col-form-label">type_name:</label>
+                    <input type="text" class="form-control" id="type_name">
                 </div>
                 
-                <div class="form-group">
-                     <label for="m_tel" class="col-form-label">telophon</label>
-                    <input type="text" id="m_tel" name="salary" class="form-control" maxlength="10"
-                     oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />  
-                </div>
-
-                <div class="form-group">
-                    <label for="m_address" class="col-form-label">address:</label>
-                    <input type="text" class="form-control" id="m_address">
-                </div>
-
-                <input type="hidden" id="member_id">
+               
+                <input type="hidden" id="type_id">
 
               </form>
             </div>
@@ -258,8 +248,7 @@ table.dataTable thead .sorting_desc:after {
 
 var html = '<td id="data1" contenteditable></td>'
     html += '<td id="data2" contenteditable></td>';
-    html += '<td id="data3" contenteditable></td>';
-    html += '<td id="data4" contenteditable></td>';
+    
     html += '<td><button onclick="insert()" class="btn btn-sm btn-success">Insert</button></td></tr>'
 
   $('#example tbody').prepend(html);
@@ -267,17 +256,15 @@ var html = '<td id="data1" contenteditable></td>'
 }
 
 function insert(){
-var name = $('#data1').text();
-var email = $('#data2').text();
-var telophon = $('#data3').text();
-var address = $('#data4').text();
+var type_code = $('#data1').text();
+var type_name = $('#data2').text();
 
-if(name != '' && email != '' && telophon != '' && address != ''){
+if(type_code != '' && type_name != '' ){
 
   $.ajax({
     url:'insert.php',
     method: 'POST',
-    data: {name:name,email:email,telophon:telophon,address:address},
+    data: {type_code:type_code,type_name:type_name},
     success:function(data){
      
       alert('บันทึกข้อมูลเสร็จเรียบร้อยแล้ว')
@@ -301,7 +288,7 @@ var modal = $(this)
 // modal.find('.modal-title').text('New message to ' + recipient)
 // modal.find('.modal-body input').val(recipient)
 
-$('#member_id').val(id);
+$('#type_id').val(id);
 
   $.ajax({
       url:'select-data.php',
@@ -309,12 +296,11 @@ $('#member_id').val(id);
       data: {id:id},
       success:function(data){
 
-        var json = jQuery.parseJSON( data );
+        var json = jQuery.parseJSON(data);
         
-        $("#m_name").val(json[0].m_name);
-        $("#m_email").val(json[0].m_email);
-        $("#m_tel").val(json[0].m_tel);
-        $("#m_address").val(json[0].m_address);
+        $("#type_code").val(json[0].type_code);
+        $("#type_name").val(json[0].type_name);
+        
 
       }   
     })
@@ -324,18 +310,18 @@ $('#member_id').val(id);
 
 function editRow(){
 
-var id = $('#member_id').val();
-var m_name = $('#m_name').val();
-var m_email = $('#m_email').val();
-var m_tel = $('#m_tel').val();
-var m_address = $('#m_address').val();
+var id = $('#type_id').val();
+var type_code = $('#type_code').val();
+var type_name = $('#type_name').val();
+
 
   $.ajax({
       url:'update.php',
       method: 'POST',
-      data: {id:id,m_name:m_name,m_email:m_email,m_tel:m_tel,m_address:m_address},
+      data: {id:id,type_code:type_code,type_name:type_name},
+      
       success:function(data){
-   
+        
         alert('บันทึกข้อมูลเสร็จเรียบร้อยแล้ว')
         $('#example').DataTable().draw()
         location.reload();
