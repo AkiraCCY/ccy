@@ -35,14 +35,15 @@
           <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active" data-interval="10000">
-                <img src="images/Super.png" class="d-block w-100" alt="...">
+                <img src="super/1.png" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item" data-interval="2000">
-                <img src="images/Super.png" class="d-block w-100" alt="...">
+              <img src="super/2.png" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="images/Super.png" class="d-block w-100" alt="...">
+              <img src="super/3.png" class="d-block w-100" alt="...">
               </div>
+              
             </div>
             <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -57,18 +58,9 @@
         
 
           <!--สินค้า-->
-          <div>
-            <h3>สินค้าแนะนำ</h3>
-            
-            <div class="card" style="width: 18rem;">
-              <img src="images/CCY.png" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">สินค้า A</h5>
-                <p class="card-text">บลาๆๆๆๆๆ</p>
-                <p class="card-text">9,999</p>
-                <a href="product.php?id=4" class="btn btn-primary">เลือก</a>
-              </div>
-            </div>
+          <?php
+            include_once('show_product.php')
+          ?>  
             
             
                       

@@ -60,7 +60,7 @@ $p_id = $_GET["id"];
                       <div class="col-md-6 pl-0">
                         <div class="polaroid">
                         
-                        <img id="myImg" src="backhome/p_img/<?php echo $row['p_img']?> "  width="450" height="370">
+                        <img id="myImg" src="backend/p_img/<?php echo $row['p_img']?> "  width="450" height="370">
                         </div>
                       </div>
                       <div class="col-md-6" >
