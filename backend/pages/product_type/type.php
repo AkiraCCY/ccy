@@ -123,10 +123,8 @@ table.dataTable thead .sorting_desc:after {
         <thead>
 
             <tr >
-                <th>Name</th>
-                <th> Email</th>
-                <th>telophon</th>
-                <th>address</th>
+                <th>รหัสประเภทสินค้า</th>
+                <th>ประเภทสินค้า</th>
                 <th></th>
               
             </tr>
@@ -245,7 +243,7 @@ table.dataTable thead .sorting_desc:after {
     <script>
       function deleteRow(id){
       $.ajax({
-          url:"delete_member.php",
+          url:"delete.php",
           method: "POST",
           data:{id:id},
           success:function(date){

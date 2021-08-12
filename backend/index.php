@@ -22,7 +22,7 @@
   <link rel="shortcut icon" href="images/favicon.png" />
 </head>
 <body>
-  <div class="container-scroller">
+<div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
@@ -308,9 +308,15 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/member/member.php">
+            <a class="nav-link" href="pages/product_type/type.php">
               <i class="icon-head menu-icon"></i>
-              <span class="menu-title">product  manage</span>
+              <span class="menu-title">product  type manage</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">
+              <i class="icon-head menu-icon"></i>
+              <span class="menu-title">product manage</span>
             </a>
           </li>
           <li class="nav-item">
