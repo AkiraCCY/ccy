@@ -29,7 +29,7 @@
                 </div>
                 </div>
             </div>
-          </div>
+            </div>
 
           <!--รูป-->
           <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
@@ -78,7 +78,7 @@
             include('product_detail.php');
           }else{
 
-            include('show_product.php'); 
+            include('test.php'); 
           }
           
           ?> 
