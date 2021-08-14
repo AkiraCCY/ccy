@@ -59,8 +59,29 @@
 
           <!--สินค้า-->
           <?php
-            include_once('show_product.php')
-          ?>  
+          $act1 = (isset($_GET['act1']) ? $_GET['act1']: '');
+          $act = (isset($_GET['act']) ? $_GET['act']: '');
+          if ($act == 'showbytype'){
+            
+   
+            include('show_product_type.php'); 
+          }elseif ($act == 'member'){
+
+           include('member_form_add.php'); 
+            
+          }elseif ($act1 != ''){
+            include('show_search_from.php'); 
+          }elseif ($act == 'add'){
+
+
+   
+            include('product_detail.php');
+          }else{
+
+            include('show_product.php'); 
+          }
+          
+          ?> 
             
             
                       

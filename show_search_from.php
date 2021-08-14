@@ -1,19 +1,25 @@
-
+<link rel="stylesheet" href="style.css">
 <?php
 
 include_once('condb.php');
 
 ?>
-<head>
-<title>ระบบร้านค้าออนไลน์</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
+<?php
+   
 
+ // echo $act;
+//exit();
+                         $query_product = "SELECT * FROM tbl_product as p 
+                         INNER JOIN tbl_type as t
+                         ON p.type_id = t.type_id 
+                         WHERE 	p.p_name LIKE '%$act1%'  OR t.type_name LIKE '%$act1%'
+                      ORDER BY p.p_id DESC";
+                     $result = mysqli_query($con, $query_product);
+                     while($row = mysqli_fetch_array($result)) 
+                                         
+                ?>
 
-
-</head>
-</br>
+<h3>&nbsp;&nbsp;ผลการค้นหาสินค้า "<?php echo $act1 ?>"</h3>
 
 <div class="row">
 
@@ -28,13 +34,13 @@ ORDER BY p.p_id DESC";
 		// echo($query_product);
         // exit()
         ?>
-  <h3>สินค้าแนะนำ</h3>
+
 <div class="row">
   
 
-		<?php foreach ($result_pro as $row_pro) {?>
-  <div class="col-sm-3 pl-0" ></br>
-  <div class="card" style="width: 18rem;">
+		<?php foreach ($result as $row_pro) {?>
+            <div class="col-sm-3 pl-0" ></br>
+    <div  class="card"   >
     </br> 
     <a href="product.php?id=<?php echo $row_pro['p_id']?>" >
 
@@ -57,7 +63,6 @@ ORDER BY p.p_id DESC";
     </div>
   </div>   </a>
   </div>
-  
   <?php } ?>   
 </div> 
 
@@ -81,7 +86,5 @@ ORDER BY p.p_id DESC";
   padding: 2px 16px;
   
 }
-
-
 
 </style>
