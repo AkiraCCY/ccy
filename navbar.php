@@ -181,7 +181,7 @@
 
       <!--login.-->
       
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="exampleModal" tabindex="-1" action="checklogin.php" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -193,12 +193,12 @@
             <div class="modal-body">
               <form>
                 <div class="form-group">
-                  <label for="exampleDropdownFormEmail2">Email address</label>
-                  <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
+                  <label for="exampleDropdownFormEmail2">Username</label>
+                  <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="Username" name="m_user" required>
                 </div>
                 <div class="form-group">
                   <label for="exampleDropdownFormPassword2">Password</label>
-                  <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+                  <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password" name="m_pass" required>
                 </div>
               </form>
             
@@ -212,13 +212,14 @@
               </div>
             <div class="modal-footer">
               <a type="button" class="btn btn-secondary" data-dismiss="modal">ยกเลิก</a>
-              <a class="btn btn-primary auth-form-btn" href="index2.html">ยืนยัน</a>
+              <a class="btn btn-primary auth-form-btn"  type="submit" class="button">ยืนยัน</a>
             </div>
           </div>
           </div>
         </div>
       </div>
 
+     
       <!--register-->
     
       <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

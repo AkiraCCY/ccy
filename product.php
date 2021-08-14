@@ -21,7 +21,7 @@ $p_id = $_GET["id"];
 <body>
  
  <?php
-   include_once('navbar.html');
+   include_once('navbar.php');
  ?>  
   
 

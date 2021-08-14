@@ -14,7 +14,7 @@
 <body>
  
  <?php
-   include_once('navbar.html')
+   include_once('navbar.php')
  ?>   
      
       <!-- คำนำ -->
@@ -35,13 +35,13 @@
           <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active" data-interval="10000">
-                <img src="super/1.png" class="d-block w-100" alt="...">
+                <img src="super/logot.png" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item" data-interval="2000">
-              <img src="super/2.png" class="d-block w-100" alt="...">
+              <img src="super/logot.png" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item">
-              <img src="super/3.png" class="d-block w-100" alt="...">
+              <img src="super/logot.png" class="d-block w-100" alt="...">
               </div>
               
             </div>
