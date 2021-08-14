@@ -33,28 +33,30 @@ ORDER BY p.p_id DESC";
   
 
 		<?php foreach ($result_pro as $row_pro) {?>
-  <div class="col-md-3 pl-0" ></br>
+  <div class="col-sm-3 pl-0" ></br>
     <div  class="card"   >
     </br> 
     <a href="product.php?id=<?php echo $row_pro['p_id']?>" >
 
     <img src="backend/p_img/<?php echo $row_pro ['p_img']?> " class="card-img-top " alt="" width="600" height="220" >
     </a>
+    </br>
     <div  class="container " >
      <a  href="product.php?id=<?php echo $row_pro['p_id']?>"style=" color: #000000;" class=" list-group-item-action "><?php echo $row_pro ['p_name']?>
          <?php echo $row_pro ['type_name']?>
+    
         <div class="row">
         
-     
+    
       
-        &nbsp&nbsp&nbsp ราคา:  &nbsp <h5 style=" color: #FF0000;"href="product.php?id=<?php echo $row_pro['p_id']?>"><?php echo number_format ($row_pro ['p_price'], 2); ?>&nbspบาท</h5>
+        &nbsp&nbsp&nbsp ราคา:  &nbsp <div style=" color: #FF0000;"href="product.php?id=<?php echo $row_pro['p_id']?>"><?php echo number_format ($row_pro ['p_price'], 2); ?>&nbspบาท</div>
         
        
         
       </div>
     </div>
   </div>   </a>
-  </div></br></br></br></br></br></br></br></br>
+  </div>
   <!-- <?php if($row['p_id']='17'){ ?><div class="col-md-3 pl-0" ></br>
     <span id="dots">
     <div  class="card"  >
