@@ -37,7 +37,8 @@ $columns = array(
         'db'        => 'member_id',
         'dt'        => 4,
         'formatter' => function( $d, $row ) {
-            return '<button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#exampleModal" data-whatever="'.$d.'">Edit</button>  <button onclick="deleteRow('.$d.')" class="btn btn-sm btn-danger">Delete</button>';
+            return '<button type="button" class="btn btn-inverse-success btn-icon" data-toggle="modal" data-target="#exampleModal" data-whatever="'.$d.'"> <i class="ti-pencil-alt"></i> </button> 
+             <button onclick="deleteRow('.$d.')" class="btn btn-inverse-danger btn-icon"> <i class="ti-trash"></i></button>';
          
             }
     )

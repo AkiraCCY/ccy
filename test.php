@@ -45,8 +45,8 @@ ORDER BY p.p_id DESC";
     <h4 style=" color: #0000000; text-align: left;"><?php echo $row_pro ['p_name']?>
     
       
-      <div  style=" color: red; text-align: right;"></br></br>
-      <h4>฿<?php echo number_format ($row_pro ['p_price'], 2); ?></h2>
+      <div  style=" color: red; text-align: right;">
+      &nbsp <h4>฿<?php echo number_format ($row_pro ['p_price'], 2); ?></h2>
       </div>
      
       <div  style=" color: #red; text-align: center;  ">
@@ -81,8 +81,9 @@ body{
 .containerb .cardb{
   position: relative;
   width: 320px;
-  height: 450px;
-  left: 60%;
+  height: 400px;
+  left: 25%;
+  
   background: #ffffff;
   border-radius: 20px;
   border: 4px solid #EBDEF0;
@@ -90,7 +91,7 @@ body{
   box-shadow: 2px 2px 15px #dcdcdc;
 }
 /* วงกลม */
-.containerb .cardb:before{
+/* .containerb .cardb:before{
   content: '';
   position: absolute;
   top: 0;
@@ -104,7 +105,7 @@ body{
 
 .containerb .cardb:hover:before{
   clip-path: circle(300px at 80% -20%);
-}
+} */
 /* ลายน้ำ */
 .containerb .cardb:after{
   content: '';
@@ -146,7 +147,7 @@ body{
   position: absolute;
   bottom: 0;
   width: 300px;
-  height: 150px;
+  height: 130px;
   transition: 1s;
   z-index: 10;
   
@@ -156,7 +157,7 @@ body{
 
 
 .containerb .cardb:hover .contentBx{
-  height: 210px;
+  height: 165px;
 
 }
 
@@ -254,7 +255,7 @@ body{
   text-decoration: none;
   font-weight: 600px;
   color: #111;
- 
+
   opacity: 0;
   transform: translateY(50px);
   transition: 0.5s;
