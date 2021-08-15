@@ -30,6 +30,7 @@
                   <h6 class="font-weight-normal mb-0">จำหน่ายสินค้า อะไหล่รถจักรยานยนต์ </h6>
                   
 
+      
 
                   
                 </div>
@@ -46,7 +47,7 @@
               <div class="carousel-item" data-interval="5000">
               <img src="super/super02.png" class="d-block w-100" alt="...">
               </div>
-              <div class="carousel-item" data-interval="5000">>
+              <div class="carousel-item" data-interval="5000">
               <img src="super/super03.png" class="d-block w-100" alt="...">
               </div>
               

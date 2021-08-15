@@ -1,46 +1,7 @@
-<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js">
-
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-<!-- DEMO -->
-<nav>
-  <div class="inner">
-    <input class="search_box" type=search placeholder="Search...">
-    <div class="search"><i class="fa fa-search"></i></div>   
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Work</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul> 
-  </div>
-</nav>
-
-
-
-
-<script>
-  // Search Toggle //
-$( ".search" ).click(function() {
- $( "ul" ).toggleClass( "active" );
- $( ".search_box" ).toggleClass( "search_box_active" );
-});
-
 $nav_bg: #860255; // purple
 $nav_bg2: #EF4B3F ; // Orange
 $search_bg: rgba(0,0,0,0.1) ; // Search box
 $search_bg_hover: rgba(0,0,0,0.3) ; // Search box
-
-</script>
-
-
-<style >
-
-
 
 body{
   background: #2E2F40;
@@ -197,6 +158,3 @@ nav {
   }
  
 }
-</style>
-
-
