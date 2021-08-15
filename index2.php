@@ -47,7 +47,7 @@
               <img src="super/super02.png" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item">
-              <img src="super/logot.png" class="d-block w-100" alt="...">
+              <img src="super/super03.png" class="d-block w-100" alt="...">
               </div>
               
             </div>
