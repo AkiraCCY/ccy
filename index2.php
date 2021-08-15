@@ -40,13 +40,13 @@
           <!--รูป-->
           <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
-              <div class="carousel-item active" data-interval="10000">
+              <div class="carousel-item active" data-interval="5000">
                 <img src="super/super01.png" class="d-block w-100" alt="..." width="200px">
               </div>
-              <div class="carousel-item" data-interval="2000">
+              <div class="carousel-item" data-interval="5000">
               <img src="super/super02.png" class="d-block w-100" alt="...">
               </div>
-              <div class="carousel-item">
+              <div class="carousel-item" data-interval="5000">>
               <img src="super/super03.png" class="d-block w-100" alt="...">
               </div>
               
