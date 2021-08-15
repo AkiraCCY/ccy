@@ -15,7 +15,9 @@
  
  <?php
    include_once('navbar.php')
- ?>   
+   
+ ?> 
+
      
       <!-- คำนำ -->
       <div class="main-panel">
@@ -26,6 +28,10 @@
                 <div class="col-12 col-xl-8 mb-4 mb-xl-0">
                   <h3 class="font-weight-bold">ยินดีต้อนรับสู่ร้าน ตี๋การช่าง</h3>
                   <h6 class="font-weight-normal mb-0">จำหน่ายสินค้า อะไหล่รถจักรยานยนต์ </h6>
+                  
+
+
+                  
                 </div>
                 </div>
             </div>
@@ -35,7 +41,7 @@
           <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active" data-interval="10000">
-                <img src="super/logot.png" class="d-block w-100" alt="...">
+                <img src="super/super01.png" class="d-block w-100" alt="..." width="200px">
               </div>
               <div class="carousel-item" data-interval="2000">
               <img src="super/logot.png" class="d-block w-100" alt="...">
@@ -53,10 +59,13 @@
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
             </a>
+
+            
           </div>
           </br>
-        
-
+          <div class="col-md-12 ">
+          <div class="row">
+          
           <!--สินค้า-->
           <?php
           $act1 = (isset($_GET['act1']) ? $_GET['act1']: '');
@@ -77,15 +86,16 @@
    
             include('product_detail.php');
           }else{
-
+            
             include('test.php'); 
           }
           
           ?> 
+               </div>
             
-            
-                      
+               </div> 
         </div>
+        
         <!-- content-wrapper ends -->
         <!-- partial:partials/_footer.html -->
         <footer class="footer">
@@ -100,6 +110,7 @@
     </div>
     <!-- page-body-wrapper ends -->
   </div>
+  
   <!-- container-scroller -->
   <script>
     $('#exampleModal').on('show.bs.modal', function (event) {

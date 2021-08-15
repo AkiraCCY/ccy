@@ -15,9 +15,6 @@ include_once('condb.php');
 </head>
 </br>
 
-<div class="row">
-
-</div>
 
 <?php $query_product = "SELECT * FROM tbl_product as p 
  INNER JOIN tbl_type as t
@@ -33,7 +30,7 @@ ORDER BY p.p_id DESC";
   
 
 		<?php foreach ($result_pro as $row_pro) {?>
-  <div class="col-sm-3 pl-0" ></br>
+  <div class="col-md-3 pl-0" ></br>
   <div class="card" style="width: 18rem;">
     </br> 
     <a href="product.php?id=<?php echo $row_pro['p_id']?>" >

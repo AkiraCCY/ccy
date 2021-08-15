@@ -15,9 +15,7 @@ include_once('condb.php');
 </head>
 </br>
 
-<div class="row">
 
-</div>
 
 <?php $query_product = "SELECT * FROM tbl_product as p 
  INNER JOIN tbl_type as t
@@ -28,7 +26,7 @@ ORDER BY p.p_id DESC";
 		// echo($query_product);
         // exit()
         ?>
-  <h3>สินค้าแนะนำ</h3>
+
 
   
 
@@ -36,6 +34,7 @@ ORDER BY p.p_id DESC";
 
 <?php foreach ($result_pro as $row_pro) {?>
 <div class="containerb">
+<div class="col-md-12 pl-0" ></br>
   <div class="cardb">
     <div class="imgBx">
     
@@ -43,17 +42,20 @@ ORDER BY p.p_id DESC";
     </div>
     <div class="contentBx">
     <!-- <div class="card-jfy-title" data-spm-anchor-id="a2o4m.home.just4u.i1.1a0f47867pNeVa">…</div> -->
-    <h3 style=" color: #ffffff; text-align: center;"><?php echo $row_pro ['p_name']?>…
+    <h5 style=" color: #0000000; text-align: left;"><?php echo $row_pro ['p_name']?>
     
       
-      <div  style=" color: red; text-align: right;">
-      <h2>฿<?php echo number_format ($row_pro ['p_price'], 2); ?></h2>
+      <div  style=" color: red; text-align: right;"></br></br>
+      <h3>฿<?php echo number_format ($row_pro ['p_price'], 2); ?></h2>
       </div>
-      
+      </br></br>
+      <div  style=" color: red; text-align: center;">
       <a href="product.php?id=<?php echo $row_pro['p_id']?>">กดเลยก็แล้วกัน</a>
+    </div>
     </div>
   </div>
 </div>
+</div>    &nbsp&nbsp&nbsp     &nbsp&nbsp&nbsp
 <?php } ?>
 
 <style>
@@ -68,7 +70,7 @@ body{
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #131313;
+
 }
 
 .containerb{
@@ -79,9 +81,12 @@ body{
   position: relative;
   width: 320px;
   height: 450px;
-  background: #232323;
+  left: 30%;
+  background: #ffffff;
   border-radius: 20px;
+  border: 4px solid #F9E79F;
   overflow: hidden;
+  box-shadow: 2px 2px 15px #dcdcdc;
 }
 /* วงกลม */
 .containerb .cardb:before{
@@ -91,7 +96,7 @@ body{
   left: 0;
   width: 100%;
   height: 100%;
-  background: #9bdc28;
+  background: #7b68ee;
   clip-path: circle(150px at 80% 20%);
   transition: 0.5s ease-in-out;
 }
@@ -101,21 +106,21 @@ body{
 }
 /* ลายน้ำ */
 .containerb .cardb:after{
-  content: 'CCY';
+  content: '';
   position: absolute;
   top: 30%;
   left: -20%;
   font-size: 12em;
   font-weight: 800;
   font-style: italic;
-  color: rgba(255,255,25,0.05)
+  color:#red
 }
 /* รูป */
 .containerb .cardb .imgBx{
   position: absolute;
   top: 30%;
   transform: translateY(-50%);
-  z-index: 10000;
+  
   width: 100%;
   height: 220px;
   transition: 0.5s;
@@ -136,20 +141,22 @@ body{
 }
 /* text */
 .containerb .cardb .contentBx{
+  left: 2%;
   position: absolute;
-  text-overflow: ellipsis;
-  overflow: hidden;
   bottom: 0;
-  width: 100%;
+  width: 300px;
   height: 150px;
-  
   transition: 1s;
   z-index: 10;
+  
+
 }
+
 
 
 .containerb .cardb:hover .contentBx{
   height: 210px;
+
 }
 
 .containerb .cardb .contentBx h2{
@@ -169,18 +176,21 @@ body{
   visibility: hidden;
   padding-top: 0;
   padding-bottom: 0;
+  
 }
 
 .containerb .cardb:hover .contentBx .size{
   opacity: 1;
   visibility: visible;
   transition-delay: 0.5s;
+  
 }
 
 .containerb .cardb:hover .contentBx .color{
   opacity: 1;
   visibility: visible;
   transition-delay: 0.6s;
+  
 }
 
 .containerb .cardb .contentBx .size h3, .containerb .cardb .contentBx .color h3{
@@ -206,6 +216,7 @@ body{
   color: #111;
   border-radius: 4px;
   cursor: pointer;
+  
 }
 
 .containerb .cardb .contentBx .size span:hover{
