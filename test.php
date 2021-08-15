@@ -42,20 +42,21 @@ ORDER BY p.p_id DESC";
     </div>
     <div class="contentBx">
     <!-- <div class="card-jfy-title" data-spm-anchor-id="a2o4m.home.just4u.i1.1a0f47867pNeVa">…</div> -->
-    <h5 style=" color: #0000000; text-align: left;"><?php echo $row_pro ['p_name']?>
+    <h4 style=" color: #0000000; text-align: left;"><?php echo $row_pro ['p_name']?>
     
       
       <div  style=" color: red; text-align: right;"></br></br>
-      <h3>฿<?php echo number_format ($row_pro ['p_price'], 2); ?></h2>
+      <h4>฿<?php echo number_format ($row_pro ['p_price'], 2); ?></h2>
       </div>
-      </br></br>
-      <div  style=" color: red; text-align: center;">
-      <a href="product.php?id=<?php echo $row_pro['p_id']?>">กดเลยก็แล้วกัน</a>
+     
+      <div  style=" color: #red; text-align: center;  ">
+     <a>  <button type="button" class="btn btn-primary btn-rounded btn-fw"href="product.php?id=<?php echo $row_pro['p_id']?>" >กดเลยก็แล้วกัน</button>
+    </a>
     </div>
     </div>
   </div>
 </div>
-</div>    &nbsp&nbsp&nbsp     &nbsp&nbsp&nbsp
+</div>    &nbsp&nbsp &nbsp
 <?php } ?>
 
 <style>
@@ -81,10 +82,10 @@ body{
   position: relative;
   width: 320px;
   height: 450px;
-  left: 30%;
+  left: 60%;
   background: #ffffff;
   border-radius: 20px;
-  border: 4px solid #F9E79F;
+  border: 4px solid #EBDEF0;
   overflow: hidden;
   box-shadow: 2px 2px 15px #dcdcdc;
 }
@@ -251,8 +252,9 @@ body{
   border-radius: 4px;
   margin-top: 10px;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 600px;
   color: #111;
+ 
   opacity: 0;
   transform: translateY(50px);
   transition: 0.5s;

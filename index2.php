@@ -122,6 +122,8 @@
   modal.find('.modal-title').text('New message to ' + recipient)
   modal.find('.modal-body input').val(recipient)
 })
+
+document.body.style.zoom="80%"
   </script>
  
 </body>
