@@ -38,25 +38,26 @@ ORDER BY p.p_id DESC";
   <div class="cardb">
     <div class="imgBx">
     
-    <img src="backend/p_img/<?php echo $row_pro ['p_img']?> " alt="" width="600" height="220" >
+    <img src="backend/p_img/<?php echo $row_pro ['p_img']?> " alt="" width="250" height="200" >
     </div>
     <div class="contentBx">
-    <!-- <div class="card-jfy-title" data-spm-anchor-id="a2o4m.home.just4u.i1.1a0f47867pNeVa">…</div> -->
-    <h4 style=" color: #0000000; text-align: left;"><?php echo $row_pro ['p_name']?>
+    <div class="p" style=" color: #0000000; text-align: left;font-size: 18px">
+    <?php echo $row_pro ['p_name']?>
     
+    </div>
+</br>
+      <div style=" color: red; text-align: right; font-size:23px;">
+      ฿<?php echo number_format ($row_pro ['p_price'], 2); ?>
       
-      <div  style=" color: red; text-align: right;">
-      &nbsp <h4>฿<?php echo number_format ($row_pro ['p_price'], 2); ?></h2>
       </div>
-     
       <div  style=" color: #red; text-align: center;  ">
-     <a>  <button type="button" class="btn btn-primary btn-rounded btn-fw"href="product.php?id=<?php echo $row_pro['p_id']?>" >กดเลยก็แล้วกัน</button>
+     <a href="product.php?id=<?php echo $row_pro['p_id']?>">  <button type="button" class="btn btn-primary btn-rounded btn-fw"  >กดเลยก็แล้วกัน</button>
     </a>
     </div>
     </div>
   </div>
 </div>
-</div>    &nbsp&nbsp &nbsp
+</div>    &nbsp
 <?php } ?>
 
 <style>
@@ -80,8 +81,8 @@ body{
 
 .containerb .cardb{
   position: relative;
-  width: 320px;
-  height: 400px;
+  width: 250px;
+  height: 380px;
   left: 25%;
   
   background: #ffffff;
@@ -120,7 +121,7 @@ body{
 /* รูป */
 .containerb .cardb .imgBx{
   position: absolute;
-  top: 30%;
+  top: 40%;
   transform: translateY(-50%);
   
   width: 100%;
@@ -146,18 +147,25 @@ body{
   left: 2%;
   position: absolute;
   bottom: 0;
-  width: 300px;
-  height: 130px;
+ width: 220px; 
+  height: 100px;
   transition: 1s;
   z-index: 10;
   
-
+  
 }
 
-
+.p {
+  display: -webkit-box;
+-webkit-line-clamp: 1;
+-webkit-box-orient: vertical;
+overflow: hidden;
+     overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 .containerb .cardb:hover .contentBx{
-  height: 165px;
+  height: 150px;
 
 }
 

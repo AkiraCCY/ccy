@@ -13,10 +13,7 @@
 </head>
 <body>
  
- <?php
-   include_once('navbar.php')
-   
- ?> 
+ 
 
      
       <!-- คำนำ -->
@@ -25,9 +22,11 @@
           <div class="row">
             <div class="col-md-12 grid-margin">
               <div class="row">
-                <div class="col-12 col-xl-8 mb-4 mb-xl-0">
-                  <h3 class="font-weight-bold">ยินดีต้อนรับสู่ร้าน ตี๋การช่าง</h3>
-                  <h6 class="font-weight-normal mb-0">จำหน่ายสินค้า อะไหล่รถจักรยานยนต์ </h6>
+                <div class="col-12 ">
+                <?php
+   include_once('navbar.php')
+   
+ ?> 
                   
 
       
@@ -124,7 +123,7 @@
   modal.find('.modal-body input').val(recipient)
 })
 
-document.body.style.zoom="80%"
+document.body.style.zoom="75%"
   </script>
  
 </body>
