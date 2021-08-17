@@ -1,3 +1,6 @@
+<?php
+include('condb.php');
+?>
 
 <link rel="stylesheet" href="form.css"> 
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
@@ -42,13 +45,13 @@
          
                         
  
-            <button type="button" class="btn btn-outline-secondary">
-                <i class="ti-user text-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">&nbsp;เข้าสู่ระบบ</i>
-                </button>
-                
-            <button type="button" class="btn btn-outline-secondary">
-                <i class="ti-clipboard text-primary" data-toggle="modal" data-target="#exampleModal2" data-whatever="@mdo">&nbsp;สมัครสมาชิก</i>
-                </button >
+              <button type="button" class="btn btn-inverse-primary btn-icon">
+                <i class="ti-user text-primary" data-toggle="modal" data-target="#exampleModal"></i>
+              </button>
+
+              <button type="button" class="btn btn-inverse-primary btn-icon">
+                <i class="ti-clipboard text-primary" data-toggle="modal" data-target="#exampleModal2"></i>
+              </button>
             </div>
           
           
@@ -61,7 +64,7 @@
 
 <!--login.-->
       
-<div class="modal fade" id="exampleModal" tabindex="-1" action="checklogin.php" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal" tabindex="-1" action="checklogin.php" method="post" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -92,7 +95,7 @@
               </div>
             <div class="modal-footer">
               <a type="button" class="btn btn-secondary" data-dismiss="modal">ยกเลิก</a>
-              <a class="btn btn-primary auth-form-btn"  type="submit" class="button">ยืนยัน</a>
+              <a class="btn btn-primary auth-form-btn"  href="index_member.php" type="submit" class="button">ยืนยัน</a>
             </div>
           </div>
           </div>
@@ -137,18 +140,20 @@
                 </div>
                 <div class="form-group">
                   <label for="exampleTextarea1">ที่อยู่</label>
-                  <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>
+                  <textarea class="form-control" id="exampleTextarea1" rows="1"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="exampleTextarea1">ตำบล</label>
+                  <textarea class="form-control" id="exampleTextarea1" rows="1"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="exampleTextarea1">อำเภอ</label>
+                  <textarea class="form-control" id="exampleTextarea1" rows="1"></textarea>
                 </div>
                 <?php
                       include_once('address.php')
                 ?> 
-
-                <?php
-                      include_once('amphures.php')
-                ?> 
-                <?php
-                      include_once('districts.php')
-                ?> 
+             
                 <div class="form-group">
                   <label for="exampleTextarea1">รหัสไปรษณี</label>
                   <input type="text" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="post">
@@ -178,5 +183,7 @@
       </div>
     </div>
     </div>
+
+    
 
     

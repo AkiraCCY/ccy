@@ -9,7 +9,12 @@
   <?php
    include_once('link.php')
  ?>  
-
+        <?php
+   include_once('navbar.php')
+   
+ ?> 
+ 
+  
 </head>
 <body>
  
@@ -23,25 +28,11 @@
             <div class="col-md-12 grid-margin">
               <div class="row">
                 <div class="col-12 ">
-                <?php
-   include_once('navbar.php')
-   
- ?> 
-                  
-
-      
-
-                  
-                </div>
-                </div>
-            </div>
-            </div>
-
-          <!--รูป-->
-          <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+        <!--รูป-->
+        <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active" data-interval="5000">
-                <img src="super/super01.png" class="d-block w-100" alt="..." width="200px">
+                <img src="super/super01.png" class="d-block w-100" alt="..." width="100px">
               </div>
               <div class="carousel-item" data-interval="5000">
               <img src="super/super02.png" class="d-block w-100" alt="...">
@@ -59,6 +50,17 @@
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
             </a>
+                  
+
+      
+
+                  
+                </div>
+                </div>
+            </div>
+            </div>
+
+         
 
             
           </div>
@@ -123,7 +125,7 @@
   modal.find('.modal-body input').val(recipient)
 })
 
-document.body.style.zoom="100%"
+document.body.style.zoom="90%"
   </script>
  
 </body>
