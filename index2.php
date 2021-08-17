@@ -123,7 +123,7 @@
   modal.find('.modal-body input').val(recipient)
 })
 
-document.body.style.zoom="75%"
+document.body.style.zoom="100%"
   </script>
  
 </body>

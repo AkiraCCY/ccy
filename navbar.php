@@ -1,4 +1,5 @@
 
+<link rel="stylesheet" href="form.css"> 
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
 <a class="navbar-brand" href="#">
     <img src="backend/11.png" width="30" height="30" class="d-inline-block align-top" alt="">
@@ -23,26 +24,36 @@
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
+      
     </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-      <div class="">
-              <a class="dropdown-item">
-                <i class="far fa-user-circle" data-toggle="modal" data-target="#exampleModal">&nbsp;เข้าสู่ระบบ</i>
+    <ul class="navbar-nav mr-lg-2">
+          <li class="nav-item nav-search d-none d-lg-block">
+            <div class="input-group">
+             
+            <form action="index2.php" method="get" >
+                  <input class="form-control mr-sm-3" style="width: 100%;" type="search" name="act1" placeholder="Search" aria-label="Search">
+                   </form>
+                 </form>
+            </div>
+          </li>
+        </ul>
+
+      <ul class="navbar-nav navbar-nav-right">
+         
+                        
+ 
+            <button type="button" class="btn btn-outline-secondary">
+                <i class="ti-user text-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">&nbsp;เข้าสู่ระบบ</i>
+                </button>
                 
-                
-              </a>
-              <a class="dropdown-item">
-                <i class="far fa-id-card" data-toggle="modal" data-target="#exampleModal2">&nbsp;สมัครสมาชิก</i>
-                
-                
-              </a>
-      </div>
+            <button type="button" class="btn btn-outline-secondary">
+                <i class="ti-clipboard text-primary" data-toggle="modal" data-target="#exampleModal2" data-whatever="@mdo">&nbsp;สมัครสมาชิก</i>
+                </button >
+            </div>
+          
+          
+        </ul>
+      
     
     
   </div>
@@ -167,3 +178,5 @@
       </div>
     </div>
     </div>
+
+    
