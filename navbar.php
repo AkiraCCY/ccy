@@ -44,22 +44,18 @@ include('condb.php');
       <ul class="navbar-nav navbar-nav-right">
          
                         
- 
-              <button type="button" class="btn btn-inverse-primary ">
+      <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-inverse-primary ">
                 <a class="ti-user text-primary" data-toggle="modal" data-target="#exampleModal"></a>
-              </button> 
-              &nbsp&nbsp
-              <button type="button" class="btn btn-inverse-primary ">
+              </button>
+  
+             <button type="button" class="btn btn-inverse-primary ">
                 <a class="ti-clipboard text-primary" data-toggle="modal" data-target="#exampleModal2"></a>
               </button>
-            </div>
-          
-          
-        </ul>
-      
-    
-    
-  </div>
+        </div>
+             </div>
+          </ul>
+      </div>
 </nav>
 
 <!--login.-->
@@ -115,9 +111,9 @@ include('condb.php');
               </button>
             </div>
             <div class="row">
-              <div class="col-md-12">
-            <div class="modal-body">
-              <form class="pt-3">
+              <div class="col-md-6">
+                <div class="modal-body">
+                <form class="pt-3">
                 <div class="form-group">
                   <label for="exampleTextarea1">Username</label>
                   <input type="text" class="form-control form-control-lg" id="exampleInputUsername1" placeholder="Username">
@@ -138,6 +134,13 @@ include('condb.php');
                   <label for="exampleTextarea1">ยืนยันรหัสผ่าน</label>
                   <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="ConfirmPassword">
                 </div>
+                </form>
+               </div>
+                </div>
+
+                <div class="col-md-6">
+                 <div class="modal-body">
+                 <form class="pt-3">
                 <div class="form-group">
                   <label for="exampleTextarea1">ที่อยู่</label>
                   <textarea class="form-control" id="exampleTextarea1" rows="1"></textarea>
@@ -162,10 +165,12 @@ include('condb.php');
                   <label for="exampleTextarea1">เบอร์โทร</label>
                   <input type="text" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="phone">
                 </div>
-                
-                
-                
-              </form>
+               </form>
+               </div>
+               </div>
+
+
+              <div class="col-md-12">
                 <div class="form-check form-check-flat form-check-primary">
                   <label class="form-check-label">
                     <input type="checkbox" class="form-check-input">

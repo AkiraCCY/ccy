@@ -9,6 +9,8 @@
   <?php
    include_once('link.php')
  ?>  
+ 
+ 
         <?php
    include_once('navbar.php')
    
@@ -69,10 +71,7 @@
           
           <div class="col-md-12 ">
           <div class="row">
-          <?php
-   include_once('show_type.php')
-   
- ?> 
+          
           
           
           <!--สินค้า-->
