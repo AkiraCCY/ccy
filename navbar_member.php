@@ -1,5 +1,5 @@
 <?php session_start();
-include('link.php');
+
 include('condb.php');
 
  $member_id = $_SESSION['member_id'];

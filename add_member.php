@@ -39,4 +39,5 @@ mysqli_close($con); //ปิดการเชื่อมต่อ database
   echo "alert('Error back to Update again');";
   echo "</script>";
 }
+mysqli_close();
 ?>

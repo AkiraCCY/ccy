@@ -18,6 +18,7 @@ ORDER BY p.p_id DESC";
 <section class="card_2s-wrapper">
   <div class="card_2-grid-space">
     <a class="card_2" href="show_search_from.php?id=<?php echo $row_pro['type_id']?>"  style="--bg-img: url('super/super02.png')">
+    <img src="backend/p_img/<?php echo $row_pro ['p_img']?> " class="card-img-top " alt="" width="600" height="220" >
     
       <div>
         <h1 href="show_search_from.php?id=<?php echo $row_pro['type_id']?>" class=" list-group-item-action "><?php echo $row_pro ['type_name']?></h1>

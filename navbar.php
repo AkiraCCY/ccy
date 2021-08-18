@@ -48,10 +48,8 @@ include('condb.php');
             <button type="button" class="btn btn-inverse-primary ">
                 <a class="ti-user text-primary" data-toggle="modal" data-target="#exampleModal"></a>
               </button>
-  
-             <button type="button" class="btn btn-inverse-primary ">
-                <a class="ti-clipboard text-primary" data-toggle="modal" data-target="#exampleModal2"></a>
-              </button>
+              <a href="register.php">  <button type="button" class="btn btn-primary btn-rounded btn-fw"  ></button></a>
+             
         </div>
              </div>
           </ul>
@@ -91,17 +89,19 @@ include('condb.php');
               </div>
             <div class="modal-footer">
               <a type="button" class="btn btn-secondary" data-dismiss="modal">ยกเลิก</a>
-              <a class="btn btn-primary auth-form-btn"  href="index_member.php" type="submit" class="button">ยืนยัน</a>
+              <button class="btn btn-primary auth-form-btn"   type="submit">ยืนยัน</button>
             </div>
           </div>
           </div>
         </div>
       </div>
+      
+
 
      
       <!--register-->
     
-      <div class="modal fade" name="register" action="member_form_add_db.php" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" name="register" action="add_member.php" method="POST" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -151,11 +151,11 @@ include('condb.php');
                 </div>
                 <div class="form-group">
                   <label for="exampleTextarea1">ตำบล</label>
-                  <textarea class="form-control" id="exampleTextarea1" rows="1"></textarea>
+                  <textarea class="form-control" id="exampleTextarea1" id="mem_tb" rows="1"></textarea>
                 </div>
                 <div class="form-group">
                   <label for="exampleTextarea1">อำเภอ</label>
-                  <textarea class="form-control" id="exampleTextarea1" rows="1"></textarea>
+                  <textarea class="form-control" id="exampleTextarea1" id="mem_ap" rows="1"></textarea>
                 </div>
                 <?php
                       include_once('address.php')
@@ -163,7 +163,7 @@ include('condb.php');
              
                 <div class="form-group">
                   <label for="exampleTextarea1">รหัสไปรษณี</label>
-                  <input type="text" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="post">
+                  <input type="text" class="form-control form-control-lg" id="exampleInputPassword1" id="mem_ps" placeholder="post">
                 </div>
                 
                </form>
@@ -181,7 +181,7 @@ include('condb.php');
                 
               <div class="modal-footer">
                 <a type="button" class="btn btn-secondary" data-dismiss="modal">ยกเลิก</a>
-                <a type="submit" class="btn btn-primary auth-form-btn" id="btn"><span class="glyphicon glyphicon-ok"></span> สมัครสมาชิก  </a>
+                <button type="submit" class="btn btn-primary auth-form-btn" id="btn"><span class="glyphicon glyphicon-ok"></span> สมัครสมาชิก  </button>
               
      
            </div>
