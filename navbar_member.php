@@ -1,8 +1,4 @@
-<?php session_start();
-
-include('condb.php');
-
- $member_id = $_SESSION['member_id'];
+<?php
 
  $query_product = "SELECT * FROM tbl_member
  where member_id = $member_id ";

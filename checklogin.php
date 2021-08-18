@@ -20,8 +20,7 @@ session_start();
                     
 
                   if ($_SESSION["member_id"]!=''){ 
-                    Header("Location: navbar_member.php?id=".$_SESSION["member_id"]);
-                        Header("Location: index_member.php");
+                   Header("Location: index_member.php");
                       
                       }
                   }else{

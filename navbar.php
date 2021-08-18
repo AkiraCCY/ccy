@@ -45,10 +45,12 @@ include('condb.php');
          
                         
       <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-inverse-primary ">
-                <a class="ti-user text-primary" data-toggle="modal" data-target="#exampleModal"></a>
-              </button>
-              <a href="register.php">  <button type="button" class="btn btn-primary btn-rounded btn-fw"  ></button></a>
+            <button type="button" class="btn btn-inverse-primary ti-user text-primary" data-toggle="modal" data-target="#exampleModal"></button>
+
+              <a class="btn-group" role="group" href="register.php" >
+           
+          <button type="button"  class="btn btn-inverse-primary ti-user text-primary" ></button>  
+             
              
         </div>
              </div>
@@ -58,7 +60,7 @@ include('condb.php');
 
 <!--login.-->
       
-<div class="modal fade" id="exampleModal" tabindex="-1" action="checklogin.php" method="post" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal" tabindex="-1"  aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -68,7 +70,7 @@ include('condb.php');
               </button>
             </div>
             <div class="modal-body">
-              <form>
+            <form  action="checklogin.php" method="post">
                 <div class="form-group">
                   <label for="exampleDropdownFormEmail2">Username</label>
                   <input type="username" class="form-control" id="exampleDropdownFormEmail2" placeholder="Username" name="m_user" required>
@@ -77,7 +79,7 @@ include('condb.php');
                   <label for="exampleDropdownFormPassword2">Password</label>
                   <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password" name="m_pass" required>
                 </div>
-              </form>
+              
             
               <div class="form-group">
                 <div class="form-check">
@@ -91,6 +93,7 @@ include('condb.php');
               <a type="button" class="btn btn-secondary" data-dismiss="modal">ยกเลิก</a>
               <button class="btn btn-primary auth-form-btn"   type="submit">ยืนยัน</button>
             </div>
+          </form>
           </div>
           </div>
         </div>

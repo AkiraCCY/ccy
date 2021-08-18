@@ -8,7 +8,11 @@
   <title>CC-Y</title>
   <?php
    include_once('link.php');
-  
+   session_start();
+
+include('condb.php');
+
+ $member_id = $_SESSION['member_id'];
  ?>  
 
 
