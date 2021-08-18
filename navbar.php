@@ -101,7 +101,7 @@ include('condb.php');
      
       <!--register-->
     
-      <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" name="register" action="member_form_add_db.php" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -116,23 +116,27 @@ include('condb.php');
                 <form class="pt-3">
                 <div class="form-group">
                   <label for="exampleTextarea1">Username</label>
-                  <input type="text" class="form-control form-control-lg" id="exampleInputUsername1" placeholder="Username">
-                </div>
-                <div class="form-group">
-                  <label for="exampleTextarea1">ชื่อ-นามสกุล</label>
-                  <input type="text" class="form-control form-control-lg" id="exampleInputUsername1" placeholder="ชื่อ-นามสกุล">
-                </div>
-                <div class="form-group">
-                  <label for="exampleTextarea1">Email</label>
-                  <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Email">
+                  <input type="text" class="form-control form-control-lg" id="exampleInputUsername1" id="mem_username" placeholder="Username" pattern="^[a-zA-Z0-9]+$" title="ภาษาอังกฤษหรือตัวเลขเท่านั้น" minlength="2">
                 </div>
                 <div class="form-group">
                   <label for="exampleTextarea1">รหัสผ่าน</label>
-                  <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
+                  <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" id="mem_password" placeholder="Password" pattern="^[a-zA-Z0-9]+$" minlength="2">
                 </div>
                 <div class="form-group">
                   <label for="exampleTextarea1">ยืนยันรหัสผ่าน</label>
-                  <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="ConfirmPassword">
+                  <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="ConfirmPassword" pattern="^[a-zA-Z0-9]+$" minlength="2">
+                </div>
+                <div class="form-group">
+                  <label for="exampleTextarea1">ชื่อ-นามสกุล</label>
+                  <input type="text" class="form-control form-control-lg" id="exampleInputUsername1" id="mem_name"  placeholder="ชื่อ-นามสกุล">
+                </div>
+                <div class="form-group">
+                  <label for="exampleTextarea1">Email</label>
+                  <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" id="mem_email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                  <label for="exampleTextarea1">เบอร์โทร</label>
+                  <input type="text" class="form-control form-control-lg" id="exampleInputPassword1" id="mem_tel" placeholder="Phone">
                 </div>
                 </form>
                </div>
@@ -143,7 +147,7 @@ include('condb.php');
                  <form class="pt-3">
                 <div class="form-group">
                   <label for="exampleTextarea1">ที่อยู่</label>
-                  <textarea class="form-control" id="exampleTextarea1" rows="1"></textarea>
+                  <textarea class="form-control" id="exampleTextarea1" id="mem_address" rows="1"></textarea>
                 </div>
                 <div class="form-group">
                   <label for="exampleTextarea1">ตำบล</label>
@@ -161,10 +165,7 @@ include('condb.php');
                   <label for="exampleTextarea1">รหัสไปรษณี</label>
                   <input type="text" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="post">
                 </div>
-                <div class="form-group">
-                  <label for="exampleTextarea1">เบอร์โทร</label>
-                  <input type="text" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="phone">
-                </div>
+                
                </form>
                </div>
                </div>
@@ -180,8 +181,9 @@ include('condb.php');
                 
               <div class="modal-footer">
                 <a type="button" class="btn btn-secondary" data-dismiss="modal">ยกเลิก</a>
-                <a class="btn btn-primary auth-form-btn" href="index2.html">ยืนยัน</a>
-              </div>
+                <a type="submit" class="btn btn-primary auth-form-btn" id="btn"><span class="glyphicon glyphicon-ok"></span> สมัครสมาชิก  </a>
+              
+     
            </div>
           </div>
         </div>
