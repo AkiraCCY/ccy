@@ -45,12 +45,12 @@ include('condb.php');
          
                         
  
-              <button type="button" class="btn btn-inverse-primary btn-icon">
-                <i class="ti-user text-primary" data-toggle="modal" data-target="#exampleModal"></i>
-              </button>
-
-              <button type="button" class="btn btn-inverse-primary btn-icon">
-                <i class="ti-clipboard text-primary" data-toggle="modal" data-target="#exampleModal2"></i>
+              <button type="button" class="btn btn-inverse-primary ">
+                <a class="ti-user text-primary" data-toggle="modal" data-target="#exampleModal"></a>
+              </button> 
+              &nbsp&nbsp
+              <button type="button" class="btn btn-inverse-primary ">
+                <a class="ti-clipboard text-primary" data-toggle="modal" data-target="#exampleModal2"></a>
               </button>
             </div>
           

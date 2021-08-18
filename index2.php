@@ -18,7 +18,7 @@
 </head>
 <body>
  
- 
+
 
      
       <!-- คำนำ -->
@@ -65,8 +65,15 @@
             
           </div>
           </br>
+
+          
           <div class="col-md-12 ">
           <div class="row">
+          <?php
+   include_once('show_type.php')
+   
+ ?> 
+          
           
           <!--สินค้า-->
           <?php
