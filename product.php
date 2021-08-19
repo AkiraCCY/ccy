@@ -84,7 +84,7 @@ $p_id = $_GET["id"];
 
                         จำนวนสินค้า : 
                       
-                        <input type="number" name="quantity" min="1"step="1" value="1"style="width:100px " max="<?php echo $row['p_quantity']?>"  required oninvalid="this.setCustomValidity('ฒกรุณาแก้ไขข้อมูลจำนวนสินค้าเป็นตัวเลขจำนวนเต็ม')">  
+                        <input type="number" name="quantity" min="1"step="1" value="1"style="width:100px " max="<?php echo $row['p_quantity']?>"  required oninvalid="this.setCustomValidity('กรุณาแก้ไขข้อมูลจำนวนสินค้าเป็นตัวเลขจำนวนเต็ม')">  
                       
                         <input type="hidden" name="hidden_name" value="<?php echo $row['p_name']?>" />
 

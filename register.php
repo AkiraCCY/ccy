@@ -1,4 +1,9 @@
+<?php
+   include_once('link.php');
+ ?>
+
 <h3>&nbsp;&nbsp; สมัครสมาชิก</h3>
+
 <?php include('condb.php');?>
 <form  name="register" action="add_member.php" method="POST" class="form-horizontal thumbnail ">
        <div class="form-group">

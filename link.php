@@ -14,6 +14,7 @@
    <!-- plugins:js -->
    <script src="backend/vendors/js/vendor.bundle.base.js"></script>
   <!-- endinject -->
+  
  
   <script src="backend/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
  
