@@ -8,20 +8,15 @@
   <title>CC-Y</title>
   <?php
    include_once('link.php')
- ?>  
+  ?>  
  
  
-        <?php
+  <?php
    include_once('navbar.php')
-   
- ?> 
- 
+  ?> 
   
 </head>
 <body>
- 
-
-
      
       <!-- คำนำ -->
       <div class="main-panel">

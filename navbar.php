@@ -5,8 +5,11 @@ include('condb.php');
 <link rel="stylesheet" href="form.css"> 
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
 <a class="navbar-brand" href="#">
-    <img src="backend/11.png" width="30" height="30" class="d-inline-block align-top" alt="">
-    Bootstrap
+&nbsp&nbsp&nbsp&nbsp
+    &nbsp&nbsp&nbsp&nbsp
+    &nbsp&nbsp&nbsp&nbsp
+    &nbsp&nbsp&nbsp&nbsp
+    <img src="super/logo.png" width="130" height="50" class="d-inline-block align-top" alt="">
 </a>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
@@ -49,7 +52,7 @@ include('condb.php');
 
               <a class="btn-group" role="group" href="register.php" >
            
-          <button type="button"  class="btn btn-inverse-primary ti-user text-primary" ></button>  
+          <button type="button"  class="btn btn-inverse-primary ti-clipboard text-primary" ></button>  
              
              
         </div>
@@ -160,6 +163,7 @@ include('condb.php');
                   <label for="exampleTextarea1">อำเภอ</label>
                   <textarea class="form-control" id="exampleTextarea1" id="mem_ap" rows="1"></textarea>
                 </div>
+
                 <?php
                       include_once('address.php')
                 ?> 
