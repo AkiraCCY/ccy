@@ -1,15 +1,13 @@
 <?php
 include('condb.php');
+
 ?>
 
-<link rel="stylesheet" href="form.css"> 
+
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
 <a class="navbar-brand" href="#">
-&nbsp&nbsp&nbsp&nbsp
-    &nbsp&nbsp&nbsp&nbsp
-    &nbsp&nbsp&nbsp&nbsp
-    &nbsp&nbsp&nbsp&nbsp
-    <img src="super/logo.png" width="130" height="50" class="d-inline-block align-top" alt="">
+    <img src="backend/11.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    Bootstrap
 </a>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
@@ -48,12 +46,12 @@ include('condb.php');
          
                         
       <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-inverse-primary ti-user text-primary" data-toggle="modal" data-target="#exampleModal"></button>
+      <button type="button" class="btn btn-inverse-success btn-icon" data-toggle="modal" data-target="#exampleModal" > <i class="ti-user"></i> </button> 
 
               <a class="btn-group" role="group" href="register.php" >
            
-          <button type="button"  class="btn btn-inverse-primary ti-clipboard text-primary" ></button>  
-             
+          <button type="button"  class="btn btn-inverse-primary ti-user text-primary" ></button>  
+</a>
              
         </div>
              </div>
@@ -61,47 +59,59 @@ include('condb.php');
       </div>
 </nav>
 
+
+
+
+<body>
 <!--login.-->
-      
-<div class="modal fade" id="exampleModal" tabindex="-1"  aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+<form  action="checklogin.php" method="post">        
+    <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title"  id="exampleModalLabel">เข้าสู่ระบบ</h4>
+              <h5 class="modal-title" id="exampleModalLabel">Login</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-            <form  action="checklogin.php" method="post">
-                <div class="form-group">
-                  <label for="exampleDropdownFormEmail2">Username</label>
-                  <input type="username" class="form-control" id="exampleDropdownFormEmail2" placeholder="Username" name="m_user" required>
-                </div>
-                <div class="form-group">
-                  <label for="exampleDropdownFormPassword2">Password</label>
-                  <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password" name="m_pass" required>
-                </div>
               
-            
-              <div class="form-group">
-                <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="dropdownCheck2" style="left: 6%;">
-                  <label class="form-check-label" for="dropdownCheck2">
-                    Remember me
-                  </label>
+
+                <div class="form-group">
+                  <label for="m_name" class="col-form-label">user name:</label>
+                  <input type="text" class="form-control" id="m_name" name="m_user" required>
                 </div>
-              </div>
-            <div class="modal-footer">
-              <a type="button" class="btn btn-secondary" data-dismiss="modal">ยกเลิก</a>
-              <button class="btn btn-primary auth-form-btn"   type="submit">ยืนยัน</button>
+                <div class="form-group">
+                  <label for="m_name" class="col-form-label">Password:</label>
+                  <input type="password" class="form-control"  id="m_pass" name="m_pass" required >
+                </div>
+               
+                
+              
+              
+
+              
             </div>
-          </form>
-          </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Close</button>
+              <button type="submit"  class="btn btn-primary">Update</button>
+            </div>
           </div>
         </div>
+      </form>
       </div>
       
+             
+      <style>
+.modal-content{
+background: rgb(210,208,225);
+background: linear-gradient(0deg, rgba(210,208,225,1) 0%, rgba(251,251,251,1) 100%);
+}
+
+      </style>
+       
+</body>    
+
 
 
      
@@ -163,7 +173,6 @@ include('condb.php');
                   <label for="exampleTextarea1">อำเภอ</label>
                   <textarea class="form-control" id="exampleTextarea1" id="mem_ap" rows="1"></textarea>
                 </div>
-
                 <?php
                       include_once('address.php')
                 ?> 
@@ -199,5 +208,8 @@ include('condb.php');
     </div>
 
     
+<script>
 
+
+</script>
     

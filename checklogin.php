@@ -32,7 +32,7 @@ session_start();
                   }
         }else{
 
-             Header("Location: index.php"); //user & password incorrect back to login again
+             Header("Location: index2.php"); //user & password incorrect back to login again
  
         }
 ?>

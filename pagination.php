@@ -3,6 +3,71 @@
 
 include_once('condb.php');
 
+ $query_product = "SELECT * FROM tbl_product as p 
+ 
+ORDER BY p.p_id DESC";
+
+	$result_pro = mysqli_query($con, $query_product) or die ("Error in query: $query_product " . mysqli_error());
+		// echo($query_product);
+        // exit()
+        $row = mysqli_fetch_row($result_pro);
+$rows = $row[0];
+
+	$page_rows = 5;  //จำนวนข้อมูลที่ต้องการให้แสดงใน 1 หน้า  ตย. 5 record / หน้า 
+
+	$last = ceil($rows/$page_rows);
+
+	if($last < 1){
+		$last = 1;
+	}
+
+	$pagenum = 1;
+
+	if(isset($_GET['pn'])){
+		$pagenum = preg_replace('#[^0-9]#', '', $_GET['pn']);
+	}
+
+	if ($pagenum < 1) {
+		$pagenum = 1;
+	}
+	else if ($pagenum > $last) {
+		$pagenum = $last;
+	}
+
+	$limit = 'LIMIT ' .($pagenum - 1) * $page_rows .',' .$page_rows;
+
+	$nquery=mysqli_query($conn,"SELECT * from  tbl_product $limit");
+
+	$paginationCtrls = '';
+
+	if($last != 1){
+
+	if ($pagenum > 1) {
+$previous = $pagenum - 1;
+		$paginationCtrls .= '<a href="'.$_SERVER['PHP_SELF'].'?pn='.$previous.'" class="btn btn-info">Previous</a> &nbsp; &nbsp; ';
+
+		for($i = $pagenum-4; $i < $pagenum; $i++){
+			if($i > 0){
+		$paginationCtrls .= '<a href="'.$_SERVER['PHP_SELF'].'?pn='.$i.'" class="btn btn-primary">'.$i.'</a> &nbsp; ';
+			}
+	}
+}
+
+	$paginationCtrls .= ''.$pagenum.' &nbsp; ';
+
+	for($i = $pagenum+1; $i <= $last; $i++){
+		$paginationCtrls .= '<a href="'.$_SERVER['PHP_SELF'].'?pn='.$i.'" class="btn btn-primary">'.$i.'</a> &nbsp; ';
+		if($i >= $pagenum+4){
+			break;
+		}
+	}
+
+if ($pagenum != $last) {
+$next = $pagenum + 1;
+$paginationCtrls .= ' &nbsp; &nbsp; <a href="'.$_SERVER['PHP_SELF'].'?pn='.$next.'" class="btn btn-info">Next</a> ';
+}
+	}
+
 ?>
 <head>
 <title>ระบบร้านค้าออนไลน์</title>
@@ -17,15 +82,7 @@ include_once('condb.php');
 
 
 
-<?php $query_product = "SELECT * FROM tbl_product as p 
- INNER JOIN tbl_type as t
- ON p.type_id = t.type_id 
-ORDER BY p.p_id DESC";
 
-	$result_pro =mysqli_query($con, $query_product) or die ("Error in query: $query_product " . mysqli_error());
-		// echo($query_product);
-        // exit()
-        ?>
 
 
   
@@ -33,7 +90,7 @@ ORDER BY p.p_id DESC";
 		
 
 <?php foreach ($result_pro as $row_pro) {?>
-  
+  <div" rel="nofollow">
 <div class="containerb">
 <div class="col-md-12 pl-0" ></br>
   <div class="cardb">
@@ -61,6 +118,11 @@ ORDER BY p.p_id DESC";
 </div>   
 <?php } ?>
 <!-- &nbsp -->
+<div id="pagination_controls"><?php echo $paginationCtrls; ?></div>
+				</div>
+				<div class="col-lg-2">
+				</div>
+        	</div>
 <style>
 
 
