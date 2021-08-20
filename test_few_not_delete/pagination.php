@@ -1,13 +1,11 @@
-
+<head>
 <?php
 
 include_once('condb.php');
 
 
 
- $query_product = "SELECT * FROM tbl_product as p 
- 
-ORDER BY p.p_id DESC";
+ $query_product = "SELECT COUNT(p_id) FROM tbl_product ";
 
 	$result_pro = mysqli_query($con, $query_product) or die ("Error in query: $query_product " . mysqli_error());
 		// echo($query_product);
@@ -15,7 +13,7 @@ ORDER BY p.p_id DESC";
         $row = mysqli_fetch_row($result_pro);
 $rows = $row[0];
 
-	$page_rows = 5;  //จำนวนข้อมูลที่ต้องการให้แสดงใน 1 หน้า  ตย. 5 record / หน้า 
+	$page_rows = 6;  //จำนวนข้อมูลที่ต้องการให้แสดงใน 1 หน้า  ตย. 5 record / หน้า 
 
 	$last = ceil($rows/$page_rows);
 
@@ -40,7 +38,7 @@ $rows = $row[0];
 
 	$nquery=mysqli_query($con,"SELECT * from  tbl_product  $limit");
 
-	$paginationCtrls = '';
+	$paginationCtrls = '</br>';
 
 	if($last != 1){
 
@@ -71,31 +69,25 @@ $paginationCtrls .= ' &nbsp; &nbsp; <a href="'.$_SERVER['PHP_SELF'].'?pn='.$next
 	}
 
 ?>
-<head>
-<title>ระบบร้านค้าออนไลน์</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="nofollow">
 
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 </head>
-</br>
 
 
 
 
 
-<div rel="nofollow">
+
 
   
 
 
-<?php foreach ($result_pro as $row_pro) {?>
+<?php foreach ($nquery as $row_pro) {?>
  
-<div class="containerb">
+  <div class="containerb">
 <div class="col-md-12 pl-0" ></br>
-<div class="row">
   <div class="cardb">
     <div class="imgBx">
     
@@ -121,12 +113,12 @@ $paginationCtrls .= ' &nbsp; &nbsp; <a href="'.$_SERVER['PHP_SELF'].'?pn='.$next
 </div>   
 <?php } ?>
 <!-- &nbsp -->
+
+
 <div id="pagination_controls"><?php echo $paginationCtrls; ?></div>
-				</div>
-				<div class="col-lg-2">
-				</div>
-        	</div>
-          </div>
+				
+				
+        	         
 
 
 
@@ -153,7 +145,7 @@ body{
   position: relative;
   width: 213px;
   height: 340px;
-  /* left:45%; */
+  left:45%;
   
   background: #ffffff;
   border-radius: 10px;

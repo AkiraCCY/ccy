@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<link  href="footer.css" rel="stylesheet" type="text/css">
+<link  href="css/footer.css" rel="stylesheet" type="text/css">
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>CC-Y</title>
   <?php
    include_once('link.php')
   ?>  
  
- <?php
-   include_once('navbar.php')
-  ?>
-  
+ 
 </head>
 <body>
     
@@ -25,6 +22,16 @@
             <div class="col-sm-12 ">
               <div class="row">
                 <div class="col-12 ">
+                <?php
+   include_once('navbar.php')
+  ?>
+        
+        </div>
+                </div>
+            </div>
+            </div>
+
+  
         <!--รูป-->
         <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -51,12 +58,7 @@
 
       
 
-                  
-                </div>
-                </div>
-            </div>
-            </div>
-
+            
          
 
             
@@ -88,10 +90,10 @@
 
 
    
-            include('product_detail.php');
+            include('user/product_detail.php');
           }else{
             
-            include('test.php'); 
+            include('user/test.php'); 
           }
           
           ?> 

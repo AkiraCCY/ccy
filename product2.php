@@ -26,6 +26,7 @@
       </br> 
       </br> 
 <div class="container mt-5 mb-5">
+<form method="post" action="seve_session_cart_test.php?id=<?php echo $p_id ?>&member_id= <?php echo $m_id ?>">
     <div class="row d-flex justify-content-center">
         <div class="col-md-12">
             <div class="card">
