@@ -3,6 +3,8 @@
 
 include_once('condb.php');
 
+
+
  $query_product = "SELECT * FROM tbl_product as p 
  
 ORDER BY p.p_id DESC";
@@ -36,7 +38,7 @@ $rows = $row[0];
 
 	$limit = 'LIMIT ' .($pagenum - 1) * $page_rows .',' .$page_rows;
 
-	$nquery=mysqli_query($conn,"SELECT * from  tbl_product $limit");
+	$nquery=mysqli_query($con,"SELECT * from  tbl_product  $limit");
 
 	$paginationCtrls = '';
 
@@ -73,8 +75,8 @@ $paginationCtrls .= ' &nbsp; &nbsp; <a href="'.$_SERVER['PHP_SELF'].'?pn='.$next
 <title>ระบบร้านค้าออนไลน์</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
-
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="nofollow">
 
 
 </head>
@@ -84,15 +86,16 @@ $paginationCtrls .= ' &nbsp; &nbsp; <a href="'.$_SERVER['PHP_SELF'].'?pn='.$next
 
 
 
+<div rel="nofollow">
 
   
 
-		
 
 <?php foreach ($result_pro as $row_pro) {?>
-  <div" rel="nofollow">
+ 
 <div class="containerb">
 <div class="col-md-12 pl-0" ></br>
+<div class="row">
   <div class="cardb">
     <div class="imgBx">
     
@@ -123,6 +126,10 @@ $paginationCtrls .= ' &nbsp; &nbsp; <a href="'.$_SERVER['PHP_SELF'].'?pn='.$next
 				<div class="col-lg-2">
 				</div>
         	</div>
+          </div>
+
+
+
 <style>
 
 
@@ -146,7 +153,7 @@ body{
   position: relative;
   width: 213px;
   height: 340px;
-  left:45%;
+  /* left:45%; */
   
   background: #ffffff;
   border-radius: 10px;
