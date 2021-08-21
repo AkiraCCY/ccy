@@ -36,7 +36,7 @@
         <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active" data-interval="5000">
-                <img src="super/super01.png" class="d-block w-100" alt="..." width="100px">
+                <img src="super/super01.png" class="d-block w-100" alt="..." >
               </div>
               <div class="carousel-item" data-interval="5000">
               <img src="super/super02.png" class="d-block w-100" alt="...">
@@ -85,7 +85,7 @@
            include('member_form_add.php'); 
             
           }elseif ($act1 != ''){
-            include('show_search_from.php'); 
+            include('user/show_search_from.php'); 
           }elseif ($act == 'add'){
 
 

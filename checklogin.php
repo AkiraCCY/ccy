@@ -6,6 +6,7 @@ session_start();
                   include("condb.php");
                   $m_user = $_POST['m_user'];
                   $m_pass = $_POST['m_pass'];
+                  $login = $_POST['login'];
 
                   $sql="SELECT * FROM tbl_member 
                   WHERE  m_user='".$m_user."' 
@@ -19,10 +20,17 @@ session_start();
                       $_SESSION["m_name"] = $row["m_name"];
                     
 
-                  if ($_SESSION["member_id"]!=''){ 
-                   Header("Location: index_member.php");
+                  if ( $_POST['login']!=''){
+             
+                    Header("Location: index_login.php");
+                    Header("Location: product2.php?id=$login");
                       
                       }
+                    elseif($_SESSION["member_id"]!=''){ 
+                   Header("Location: index_member.php"); 
+
+                        
+                    }
                   }else{
                     echo "<script>";
                         echo "alert(\" user หรือ  password ไม่ถูกต้อง\");"; 

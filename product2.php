@@ -25,8 +25,8 @@
       </br> 
       </br> 
       </br> 
-<div class="container mt-5 mb-5">
-<form method="post" action="seve_session_cart_test.php?id=<?php echo $p_id ?>&member_id= <?php echo $m_id ?>">
+<div class="container mt-5 mb-5" >
+<form method="post" action="checklogin.php" method="post">
     <div class="row d-flex justify-content-center">
         <div class="col-md-12">
             <div class="card">
@@ -52,23 +52,77 @@
                             </div>
                             <p class="about"><?php echo $row['p_detail'] ?></p>
                             <div class="sizes mt-5">
-                                                  
+                                     
+                            <input type="hidden" name="login" value="<?php echo  $row['p_id'] ?>" />
+
                       <input type="number" style="border-color: #ff0000" name="quantity" min="1"step="1" value="1"style="width:100px " max="<?php echo $row['p_quantity']?>"  required oninvalid="this.setCustomValidity('กรุณาแก้ไขข้อมูลจำนวนสินค้าเป็นตัวเลขจำนวนเต็ม')">
                             <small class="value">มีสินค้าทั้งหมด <?php echo $row['p_quantity']?> ชิ้น</small>
                                 <input type="hidden" name="hidden_name" value="<?php echo $row['p_name']?>" />
                                 <input type="hidden" name="hidden_price" value="<?php echo $row['p_price']?>" />
                             </div>
-                            <div class="cart mt-4 align-items-center"> <button type="submit"onclick="document.getElementById('id83').style.display='block'" name="add_to_cart"  class="btn btn-danger text-uppercase mr-2 px-4" value="Add to cart" >
+                            <div class="cart mt-4 align-items-center"> <button type="submit" data-toggle="modal" data-target="#exampleModal2"  class="btn btn-danger text-uppercase mr-2 px-4" value="Add to cart" >
 
-                            Add to cart</div>
+                            Add to cart
+                        </div>
                 </div>
             </div>
         </div>
-        
+       
+       
+       
     </div>
 </div>
 <?php } ?>
 
+<body>
+<!--login.-->
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+        
+    <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              
+
+                <div class="form-group">
+                  <label for="m_name" class="col-form-label">user name:</label>
+                  <input type="text" class="form-control" id="m_name" name="m_user" required>
+                </div>
+                <div class="form-group">
+                  <label for="m_name" class="col-form-label">Password:</label>
+                  <input type="password" class="form-control"  id="m_pass" name="m_pass" required >
+                </div>
+               
+                
+      
+              
+
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Close</button>
+              <button type="submit"  class="btn btn-primary">Update</button>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+      
+             
+      <style>
+.modal-content{
+background: rgb(210,208,225);
+background: linear-gradient(0deg, rgba(210,208,225,1) 0%, rgba(251,251,251,1) 100%);
+}
+
+      </style>
+       
+</body>    
 
 <style>
     body {
