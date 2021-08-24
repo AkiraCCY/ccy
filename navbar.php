@@ -50,7 +50,7 @@ include('condb.php');
 
               <a class="btn-group" role="group" href="register.php" >
            
-          <button type="button"  class="btn btn-inverse-primary ti-user text-primary" ></button>  
+          <button type="button"  class="btn btn-inverse-primary ti-clipboard text-primary" ></button>  
 </a>
              
         </div>

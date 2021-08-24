@@ -49,7 +49,7 @@
         </ul>
 
         <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-inverse-primary ti-shopping-cart text-primary"></button>
+            <button type="button" class="btn btn-inverse-primary ti-shopping-cart text-primary" href="../cart"></button>
 
              
            

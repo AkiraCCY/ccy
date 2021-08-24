@@ -3,8 +3,8 @@
 session_start();
 
 include_once('condb.php');
-
-include_once('navbar.html')
+include('../navbar_member.php'); 
+include_once('navbar.php')
  
  error_reporting( error_reporting() & ~E_NOTICE );
  $add =$_GET['add'];
