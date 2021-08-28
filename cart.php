@@ -2,18 +2,18 @@
 <?php
 session_start();
 
-include_once('condb.php');
-include('../navbar_member.php'); 
-include_once('navbar.php')
+include_once('link.php');
+
+
  
- error_reporting( error_reporting() & ~E_NOTICE );
- $add =$_GET['add'];
+
+
 
 
  $m_id = $_SESSION['member_id'];
 
 
-
+include('navbar_member.php'); 
 
 
 	if(isset($_GET["action"])){
@@ -38,7 +38,7 @@ include_once('navbar.php')
  <link rel="stylesheet"  href="footer.css">
   <div class="col-md-2">
      
-     <?php include('menu.php'); ?>
+ 
      </div>
    </br>
 <!DOCTYPE html>
@@ -67,7 +67,7 @@ include_once('navbar.php')
 				
 				?>
 
-
+</br></br></br>
 			<div class="col-md-4">
 				
 			</div>
@@ -89,8 +89,9 @@ include_once('navbar.php')
 						<th style="width:13%">ลบเลยก็แล้วกัน!</th>
 						
 					</tr>
+					
 					<?php
-
+$total = 0;
 						foreach ($result as $row_pro){
 							
 
@@ -115,7 +116,7 @@ include_once('navbar.php')
 							
 							
 							$total =  $total + $sum;
-							// $total = $total + $row_pro["d_total"];
+						
 						}
 					?>
 					<tr>
@@ -133,7 +134,7 @@ include_once('navbar.php')
 						<td colspan="2" align="right"></td>
 						
 						
-						<td align="right"><a class="btn btn-primary" href="cart_add_db.php?total=<?php echo $total ?>" role="button">ชำระสินค้า</a></td>
+						<td align="right"><a class="btn btn-primary" href="payment.php?total=<?php echo $total ?>" role="button">ชำระสินค้า</a></td>
 
 						
 					</tr>

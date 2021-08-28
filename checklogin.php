@@ -22,8 +22,8 @@ session_start();
 
                   if ( $_POST['login']!=''){
              
-                    Header("Location: index_login.php");
-                    Header("Location: product2.php?id=$login");
+                    // Header("Location: index_login.php");
+                    Header("Location: product_member.php?id=$login");
                       
                       }
                     elseif($_SESSION["member_id"]!=''){ 

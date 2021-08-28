@@ -30,7 +30,7 @@ include('condb.php');
               <div class="row">
                 <div class="col-12 ">
                 <?php
-   include_once('member/navbar_member.php')
+   include_once('navbar_member.php')
    
  ?> 
                   
