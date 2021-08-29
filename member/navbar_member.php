@@ -60,7 +60,7 @@
          
             <a class="dropdown-item" href="edit_member.php">แก้ไขข้อมูลส่วนตัว&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="logout.php">logout</a>
+            <a class="dropdown-item" href="user/logout.php">logout</a>
            
           </div></button>  
              

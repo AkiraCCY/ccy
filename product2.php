@@ -75,43 +75,7 @@
 <?php } ?>
 
 <body>
-<!--login.-->
-<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
-        
-    <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              
 
-                <div class="form-group">
-                  <label for="m_name" class="col-form-label">user name:</label>
-                  <input type="text" class="form-control" id="m_name" name="m_user" required>
-                </div>
-                <div class="form-group">
-                  <label for="m_name" class="col-form-label">Password:</label>
-                  <input type="password" class="form-control"  id="m_pass" name="m_pass" required >
-                </div>
-               
-                
-      
-              
-
-              
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Close</button>
-              <button type="submit"  class="btn btn-primary">Update</button>
-            </div>
-          </div>
-        </div>
-      
-      </div>
       
              
       <style>
