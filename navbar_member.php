@@ -3,7 +3,6 @@ include('condb.php');
 $m_name =  $_SESSION["m_name"];
 ?>
 
-
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
 <a class="navbar-brand" href="index_member.php">
     <img src="backend/11.png" width="30" height="30" class="d-inline-block align-top" alt="">
@@ -49,16 +48,17 @@ $m_name =  $_SESSION["m_name"];
         </ul>
 
         <ul class="navbar-nav navbar-nav-right">
+
+        <a class="btn btn-inverse-primary ti-shopping-cart" href="cart.php"></a> 
          
          <li class="nav-item dropdown">
-           <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           <a class="nav-link dropdown-toggle btn btn-inverse-primary ti-user" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <?php echo $m_name ?>
            </a>   
            <div class="dropdown-menu dropdown-menu-right"  >
-             <a class="dropdown-item" href="#">Action</a>
-             <a class="dropdown-item" href="#">Another action</a>
+             <a class="dropdown-item btn btn-inverse-primary" href="#">แก้ไขข้อมูลส่วนตัว</a>
              <div class="dropdown-divider"></div>
-             <a class="dropdown-item" href="index2.php">logout</a>
+             <a class="dropdown-item btn btn-inverse-primary" href="index2.php">ออกจากระบบ</a>
            </div>
          </li>
                 </div>
@@ -70,43 +70,6 @@ $m_name =  $_SESSION["m_name"];
 
 
 <body>
-<!--login.-->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
-<form  action="checklogin.php" method="post">        
-    <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              
-
-                <div class="form-group">
-                  <label for="m_name" class="col-form-label">user name:</label>
-                  <input type="text" class="form-control" id="m_name" name="m_user" required>
-                </div>
-                <div class="form-group">
-                  <label for="m_name" class="col-form-label">Password:</label>
-                  <input type="password" class="form-control"  id="m_pass" name="m_pass" required >
-                </div>
-               
-                
-              
-              
-
-              
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Close</button>
-              <button type="submit"  class="btn btn-primary">Update</button>
-            </div>
-          </div>
-        </div>
-      </form>
-      </div>
       
              
       <style>

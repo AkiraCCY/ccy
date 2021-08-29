@@ -46,7 +46,7 @@ include('condb.php');
          
                         
       <div class="btn-group" role="group" aria-label="Basic example">
-      <button type="button" class="btn btn-inverse-success btn-icon" data-toggle="modal" data-target="#exampleModal" > <i class="ti-user"></i> </button> 
+      <button type="button" class="btn btn-inverse-primary btn-icon" data-toggle="modal" data-target="#exampleModal" > <i class="ti-user"></i> </button> 
 
               <a class="btn-group" role="group" href="register.php" >
            

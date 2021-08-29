@@ -40,7 +40,7 @@
                     <div class="col-md-6">
                         <div class="product p-4">
                             <div class="d-flex justify-content-between align-items-center">
-                                <div class="d-flex align-items-center"> <i class="fa fa-long-arrow-left"></i> <span class="ml-1">Back</span> </div> 
+                            <div class="back-to-shop"><a href="index_member.php">กลับ</a></div>
                             </div>
                             <div class="mt-4 mb-3"> <span class="text-uppercase text-muted brand"><?php echo $row['type_name']?> </span>
                                 <h4 class="text-uppercase"><?php echo $row['p_name']?></h4>

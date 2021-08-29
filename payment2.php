@@ -23,21 +23,12 @@ $row1 = mysqli_fetch_array($result);
 
 ?><hr></br></br></br>
 
-<div class="card">
-    <div class="row">
-        <div class="col-md-8 cart">
-            <div class="title">
-                <div class="row">
-                    <div class="col">
-                        <h4><b>ชำระเงิน</b></h4>
-                        
-                    </div>
-                                       
-                </div>
-            </div>
-
-                        
-            <table class="table table-bordered table-striped">
+<div class="col-md-2">
+     </div>
+<div class="container">
+<h3>&nbsp;&nbsp;&nbsp;&nbsp;ชำระเงิน</h3>
+      <div class="col-md-12">
+<table class="table table-bordered table-striped">
                             <thead>
                                 <tr>
                                     <th>รูปสินค้า</th>
@@ -90,8 +81,7 @@ $row1 = mysqli_fetch_array($result);
    }
  
 ?>
-
-<td colspan="5" style=" text-align: lift;">
+                         <td colspan="5" style=" text-align: lift;">
                                 ที่อยู่จัดส่งเดิม
                         </td>
                                     <tr>
@@ -130,7 +120,7 @@ $row1 = mysqli_fetch_array($result);
                             <form method="POST" action="payment_add_db.php?member_id=<?php echo $m_id?>" enctype="multipart/form-data"> 
                                
                             </tr>
-                            <td colspan="5" style=" text-align: lift;">
+                        <td colspan="5" style=" text-align: lift;">
                                     <h6>เพิ่มที่อยู่จัดส่ง</h6>
 
                                     <textarea  name="address" rows="2" cols="60" class="form-control" placeholder="กรอกสถานที่ที่ต้องการจัดส่งสินค้า"></textarea>
@@ -149,44 +139,33 @@ $row1 = mysqli_fetch_array($result);
                                $total_price=$total + $ff;
                                
                                    ?>
-            </table>
-            
-                    
-                        <br><br>
-                        <div class="back-to-shop"><a href="index_member.php">&leftarrow;</a><span class="text-muted">Back to shop</span></div>
-        </div>
-        <div class="col-md-4 summary">
-            <div>
-                <h5><b>คำนวนราคาสินค้า</b></h5>
-            </div>
-            <hr>
-
-            
-            
+                            <tr>
+                             <td colspan="2" style=" text-align: right;">
                                 <h6> หลักฐานการชำระเงิน </h6>    <input type="file" name="d_img" id="d_img" class="form-control" required/>
-                                <br>
+                                <td colspan="3" style=" text-align: right;">
                                     
-                                    <h5 style=" text-align: right;">รวมราคาสินค้า <?php echo number_format($total,2); ?> บาท</h5>
-                                    <h5 style=" text-align: right;">ค่าจัดส่ง 50.00 บาท</h5>
-                                    <h5 style=" text-align: right;">รวมราคาสุทธิ <?php echo number_format($total_price,2); ?> บาท</h5>
+                                    <h6>รวมราคาสินค้า <?php echo number_format($total,2); ?> บาท
+                                    <br>ค่าจัดส่ง 50.00 บาท<br>รวมราคาสุทธิ <?php echo number_format($total_price,2); ?> บาท</h6>
                                     <input type="hidden" name="total" value="<?php echo $total_price;?>">
                                     <input type="hidden" name="address_basic" value="<?php echo $row1['m_address'];?>">
                                     <input type="hidden" name="email_basic" value="<?php echo $row1['m_email'];?>">
                                     <input type="hidden" name="tal_basic" value="<?php echo $row1['m_tel'];?>">
-                               
-                                    <br>
-
+                                </td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="1" style=" text-align: left;">
                                 <h4>&nbsp;&nbsp; ช่องทางการชำระเงิน </h4>
                                 
-                                
-                                <h6>(ท่านสามารถเลือกการชำระเงินโดยผ่่านบัญชีธนาคาร ด้านล่างได้ทันที)</h6>
-                            <table class="tabel">    
-                            <br>
+                                <td colspan="4" style=" text-align: left;">
+                                <h6>(ท่านสามารถเลือกการชำระเงินโดยผ่่านบัญชีธราคาร ด้านล่างได้ทันที)</h6>
+                                </td>
+                                </td>
+                            </tr>
                             <tr>
                                 <td colspan="1" style=" text-align: center;">
                                 <img src = "super/k1.jpg" width="150px">  
-                                &nbsp&nbsp&nbsp&nbsp&nbsp
-                                <td colspan="2" style=" text-align: lift;">
+                                <td colspan="4" style=" text-align: lift;">
                                 <h5> ชื่อบัญชี : สุรัตน์ พิณปรุ </h5>  
                                 <h5> รหัสบัญชี : 223-2-54555-1 </h5> 
                                 <h5> ธนาคาร : กสิกรไทย </h5> 
@@ -195,128 +174,73 @@ $row1 = mysqli_fetch_array($result);
                                 </td>
                                 </td>
                             </tr>
-                        </table>
-                          <br>
-                        <a class="btn btn-danger goback"href="cart.php">
+                            <tr>
+                                
+                                <td colspan="5" style="text-align: right;">
+                                
+                                
+                                    <a class="btn btn-danger goback"href="cart.php">
                                         <span class="glyphicon glyphicon-circle-arrow-left"></span>
                                         ย้อนกลับ
-                        </a>
-                                    <input type="submit"   name="add_to_cart"  class="btn btn-success" value="บันทึกการสั่งซื้อสินค้า"/>
+                                    </a>
+                                        <input type="submit"   name="add_to_cart"  class="btn btn-success" value="บันทึกการสั่งซื้อสินค้า" />
                                     
-                                        
-                            
-        </div>
-    </div>
+                                </td>   
+                               
+                                
+                                   
+                                
+                            </tr>
+
+                            </form>
+                            </tbody>
+                        </table>
+      </div>
 </div>
+<a class="nav-link" style=" color: #FF4D00; text-align:right" href="#">
+<svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-arrow-up-square-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 11.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+ </svg> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</a>
 
 
-<style>
-
-body {
-    background: #ddd;
-    min-height: 100vh;
-    vertical-align: middle;
-    display: flex;
-    font-family: sans-serif;
-    font-size: 0.8rem;
-    font-weight: bold
-}
-
-.title {
-    margin-bottom: 5vh
-}
-
-.card {
-    margin: auto;
-    max-width: 2500px;
-    width: 90%;
-    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 1rem;
-    border: transparent
-}
-
-@media(max-width:767px) {
-    .card {
-        margin: 3vh auto
-    }
-}
-
-.cart {
-    background-color: #fff;
-    padding: 4vh 5vh;
-    border-bottom-left-radius: 1rem;
-    border-top-left-radius: 1rem
-}
-
-@media(max-width:767px) {
-    .cart {
-        padding: 4vh;
-        border-bottom-left-radius: unset;
-        border-top-right-radius: 1rem
-    }
-}
-
-.summary {
-    background-color: #ddd;
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    padding: 4vh;
-    color: rgb(65, 65, 65)
-}
-
-@media(max-width:767px) {
-    .summary {
-        border-top-right-radius: unset;
-        border-bottom-left-radius: 1rem
-    }
-}
-
-
-
-.row {
-    margin: 0
-}
-
-.title b {
-    font-size: 1.5rem
-}
-
-.main {
-    margin: 0;
-    padding: 2vh 0;
-    width: 100%
-}
-
-select {
-    border: 1px solid rgba(0, 0, 0, 0.137);
-    padding: 1.5vh 1vh;
-    margin-bottom: 4vh;
-    outline: none;
-    width: 100%;
-    background-color: rgb(247, 247, 247)
-}
-
-
-
-.btn {
-    color: white;
-    width: 100%;
-}
-
-
-
-.btn:hover {
-    color: white
-}
-
-a {
-    color: black
-}
-
-a:hover {
-    color: black;
-    text-decoration: none
-}
-
-
-</style>
+  <div class="footer">
+  <div class="row">
+  <div class="col-md-4">
+  <p style="color:#ffffff; text-align:left;"> 
+  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About Me
+          <hr width=80% size=60 color=ffffff>
+           <p style="color:#ffffff; text-align:left;"> 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ร้านรัตนะอะไหล่
+          </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เป็นร้านจำหน่ายชุดแต่งและอุปกรณ์ซ่อมบำรุง                
+          </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;อย่างครบวงจรที่ตั้งของร้านอยู่ในเขตจังหวัดนครราชสีมา
+          </h5> 
+                   
+            </p>
+            </div>
+  <div class="col-md-4">
+  <p style="color:#ffffff; text-align:left;">      
+   
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;ร้านรัตนะอะไหล่
+          <hr width=80% size=60 color=ffffff>
+          <p style="color:#ffffff; text-align:left;"> 
+          
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        เจ้าของร้าน : นายสุรัตน์ พิณปรุ
+           </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ที่ตั้ง : ร้านอยู่ที่บ้านเลยที่ 291 หมู่ 2 ตำบลปรุใหญ่ 
+           </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;อำเภอเมือง จังหวัดนครราชสีมา 30000
+           </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เปิดให้บริการ : 09.00 น. ถึงเวลา 18.00 น.
+           </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เบอร์โทรติดต่อ : 081-2648838</p>
+           </h5>
+           </div>
+  <div class="col-md-4">
+  <img src="moto/store.jpg"width="50%">
+</div>
+  
+</div>
