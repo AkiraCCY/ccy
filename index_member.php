@@ -26,14 +26,14 @@ include('condb.php');
       <div class="main">
         <div class="content-wrapper">
           <div class="row">
-            <div class="col-md-12 grid-margin">
+            <div class="col-sm-12 ">
               <div class="row">
                 <div class="col-12 ">
                 <?php
    include_once('navbar_member.php')
    
  ?> 
-                  
+            
 
       
 
@@ -100,8 +100,8 @@ include('condb.php');
                </div>
             
                </div> 
-        </div>
-        
+     
+        </br>
         <!-- content-wrapper ends -->
         <!-- partial:partials/_footer.html -->
         <footer class="site-footer">
@@ -162,7 +162,7 @@ include('condb.php');
     </div>
     <!-- page-body-wrapper ends -->
   
-  
+
   <!-- container-scroller -->
   <script>
 
