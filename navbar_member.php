@@ -11,7 +11,7 @@ $m_name =  $_SESSION["m_name"];
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="index_member.php">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index_member.php">หน้าหลัก <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="product_status.php">product_status<span class="sr-only">(current)</span></a>
@@ -24,7 +24,7 @@ $m_name =  $_SESSION["m_name"];
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
+          ประเภทสินค้า
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">Action</a>
