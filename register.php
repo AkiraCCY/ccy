@@ -14,6 +14,7 @@
 
   <h3>สมัครสมาชิก</h3>
 
+<div class="card">
 <div class="main">
         <div class="content-wrapper">
           <div class="row">
@@ -49,18 +50,7 @@
                   <label for="exampleTextarea1">ที่อยู่</label>
                   <textarea class="form-control"  name="mem_address" id="mem_address" rows="1"></textarea>
                 </div>
-                <div class="form-group">
-                  <label for="exampleTextarea1">ตำบล</label>
-                  <textarea class="form-control"   name="mem_tb" id="mem_tb" rows="1"></textarea>
-                </div>
-                <div class="form-group">
-                  <label for="exampleTextarea1">อำเภอ</label>
-                  <textarea class="form-control"  name="mem_ap" id="mem_ap" rows="1"></textarea>
-                </div>
-                <div class="form-group">
-                  <label for="exampleTextarea1">จังหวัด</label>
-                  <textarea class="form-control"  name="mem_api"  id="mem_api" rows="1"></textarea>
-                </div>
+                
                 <div class="form-group">
                   <label for="exampleTextarea1">รหัสไปรษณี</label>
                   <input type="text" class="form-control form-control-lg"   name="mem_ps" id="mem_ps" placeholder="post">
@@ -75,6 +65,25 @@
       </div>
       </div>
       </div>
+    </div>
      
       </body>
 </html>
+<style>
+.card {
+    
+    margin: 50px;
+    max-width: auto;
+    width: auto;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+    
+}
+
+.main {
+    width: 40%;    
+    
+}
+
+
+</style>

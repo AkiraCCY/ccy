@@ -37,7 +37,7 @@ $num=mysqli_num_rows($result1);
   if($result){
   echo "<script type='text/javascript'>";
   echo "alert('Register Succesfuly');";
-  echo "window.location = 'index.php'; ";
+  echo "window.location = 'index2.php'; ";
   echo "</script>";
   }
   else{
