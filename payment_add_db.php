@@ -27,7 +27,7 @@ $tal_basic  =(isset($_POST['tal_basic']) ? $_POST['tal_basic'] :'');
 $upload=$_FILES['d_img'];
 	if($upload <> '') {
 
-	$path="backhome/p_img/";
+	$path="backend/p_img/";
 	$type = strrchr($_FILES['d_img']['name'],".");
 	$newname ='d_img'.$numrand.$date1.$type;
 	$path_copy=$path.$newname;
@@ -79,10 +79,10 @@ $add1 = "INSERT INTO tbl_order_detail
       $query7	= mysqli_query($con, $add1)or die("Error in query: $add1".mysqli_error());
 
 $add_time = "INSERT INTO tbl_product_detail
-            (timesave)
+            (time_save)
             VALUES
             ('$date2')"; 
-            $query001	= mysqli_query($con, $add_time)or die("Error in query: $add1".mysqli_error());
+            $query001	= mysqli_query($con, $add_time)or die("Error in query: $add_time".mysqli_error());
     
      
       $sql0 = "SELECT * FROM tbl_order_detail

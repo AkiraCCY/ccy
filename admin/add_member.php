@@ -7,10 +7,6 @@ include('../condb.php');  //ไฟล์เชื่อมต่อกับ dat
   $mem_email = $_REQUEST["mem_email"];
   $mem_tel = $_REQUEST["mem_tel"];
   $mem_address = $_REQUEST["mem_address"];
-  $mem_tb = $_REQUEST["mem_tb"];
-  $mem_ap = $_REQUEST["mem_ap"];
-  $mem_api = $_REQUEST["mem_api"];
-  $mem_ps = $_REQUEST["mem_ps"];
   //เพิ่มเข้าไปในฐานข้อมูล
 
   $check = "SELECT * FROM tbl_member 
@@ -27,7 +23,7 @@ $num=mysqli_num_rows($result1);
 
 }else{
   $sql = "INSERT INTO tbl_member(m_user, m_pass, m_name, m_email, m_tel, m_address)
-  VALUES('$mem_username', '$mem_password', '$mem_name', '$mem_email', '$mem_tel', '$mem_address &nbsp;&nbsp; $mem_tb &nbsp;&nbsp; $mem_ap &nbsp;&nbsp;  $mem_api &nbsp;&nbsp; $mem_ps')";
+  VALUES('$mem_username', '$mem_password', '$mem_name', '$mem_email', '$mem_tel', '$mem_address &nbsp;&nbsp;')";
   $result = mysqli_query($con, $sql) or die ("Error in query: $sql " . mysqli_error($con));
   
   //ปิดการเชื่อมต่อ database
@@ -37,7 +33,7 @@ $num=mysqli_num_rows($result1);
   if($result){
   echo "<script type='text/javascript'>";
   echo "alert('Register Succesfuly');";
-  echo "window.location = 'index2.php'; ";
+  echo "window.location = '../index2.php'; ";
   echo "</script>";
   }
   else{

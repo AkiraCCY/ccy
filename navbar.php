@@ -2,9 +2,18 @@
 include('condb.php');
 
 ?>
+<?php $query_product = "SELECT * FROM tbl_type
+order by type_id DESC";
 
+$query_type = "SELECT * FROM tbl_type ORDER BY type_id ASC";
+$result_type =mysqli_query($con, $query_type) or die ("Error in query: $query_type " . mysqli_error());
+  // echo($query_type);
+  // exit()
 
-<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+?>
+
+<body>
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light" >
 <a class="navbar-brand" href="#">
     <img src="backend/11.png" width="30" height="30" class="d-inline-block align-top" alt="">
     Bootstrap
@@ -22,12 +31,19 @@ include('condb.php');
           ประเภทสินค้า
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
+        <?php
+		foreach ($result_type as $row )  { ?>
+
+        
+          <a class="dropdown-item" href="index.php?act=showbytype&type_id=<?php echo $row['type_id'];?>"><?php echo $row["type_name"]; ?></a>
+          
+        
+      
+      <?php
+      }
+    ?>
+  </div>  
+  </li>
       
     </ul>
     <ul class="navbar-nav mr-lg-2">
@@ -102,13 +118,22 @@ include('condb.php');
       </div>
       
              
-      <style>
-.modal-content{
-background: rgb(210,208,225);
-background: linear-gradient(0deg, rgba(210,208,225,1) 0%, rgba(251,251,251,1) 100%);
-}
-
-      </style>
+     
        
 </body>    
 
+ <style>
+body {
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    font-weight: bold
+}
+
+
+.modal-content{
+background: rgb(210,208,225);
+background: linear-gradient(0deg, rgba(210,208,225,1) 0%, rgba(251,251,251,1) 100%);
+
+}
+
+      </style>

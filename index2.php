@@ -12,7 +12,7 @@
  
  
 </head>
-<body>
+<body >
     
     
       <!-- คำนำ -->
@@ -177,3 +177,10 @@ document.body.style.zoom="100%"
 
 </html>
 
+<style>
+  body {
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    font-weight: bold
+}
+</style>

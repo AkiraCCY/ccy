@@ -14,7 +14,7 @@ include_once('condb.php');
 
 </head>
 </br>
-
+<body>
 
 <?php $query_product = "SELECT * FROM tbl_product as p 
  INNER JOIN tbl_type as t
@@ -57,8 +57,16 @@ ORDER BY p.p_id DESC";
   
   <?php } ?>   
 </div> 
+</body>
+
 
 <style>
+body {
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    font-weight: bold
+}
+
 .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
