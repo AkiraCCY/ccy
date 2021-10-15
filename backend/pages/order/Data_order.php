@@ -47,6 +47,7 @@
   <link rel="shortcut icon" href="../../images/favicon.png" />
   
   <p></p>
+  </br></br>
     <div class="row">
       <div class="col-md-2.3">
         <!-- Left side column. contains the logo and sidebar -->
@@ -56,7 +57,7 @@
       <div class="col-md-10">
      
       <p></p>
-      
+      </br>
       <?php
       $act = $_GET['act'];
       if($act == 'show'){

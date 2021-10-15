@@ -14,8 +14,7 @@ $result_type =mysqli_query($con, $query_type) or die ("Error in query: $query_ty
 <body>
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
 <a class="navbar-brand" href="index_member.php">
-    <img src="backend/11.png" width="30" height="30" class="d-inline-block align-top" alt="">
-    ตี๋การช่าง
+<img src="backend/images/tee.png" width="100" height="30" class="d-inline-block align-top" alt="">
 </a>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">

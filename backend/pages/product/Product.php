@@ -43,9 +43,11 @@
 
 
   <body>
+  </br></br>
     <div class="">
     <?php include('../../navbar.php');?>
   <p></p>
+  
     <div class="row">
       <div class="col-md-2.3">
         <!-- Left side column. contains the logo and sidebar -->
@@ -55,7 +57,7 @@
       <div class="col-md-10">
       <a href="product.php?act=add" class="btn-info btn-sm" > เพิ่ม</a>
       <p></p>
-      
+      </br>
       <?php
       $act = $_GET['act'];
       if($act == 'add'){

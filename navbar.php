@@ -15,17 +15,15 @@ $result_type =mysqli_query($con, $query_type) or die ("Error in query: $query_ty
 <body>
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light" >
 <a class="navbar-brand" href="#">
-    <img src="backend/11.png" width="30" height="30" class="d-inline-block align-top" alt="">
-    Bootstrap
+    <img src="backend/images/tee.png" width="100" height="30" class="d-inline-block align-top" alt="">
+    
 </a>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" href="index2.php">หน้าหลัก <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
+      
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           ประเภทสินค้า

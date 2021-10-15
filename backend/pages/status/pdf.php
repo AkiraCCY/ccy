@@ -74,7 +74,7 @@ $head = '
  <br>เลขที่เอกสาร : '.$row1['o_code'].'  <br>
 วันที่ :'.$row1['timesave'].' </font></h3>
 
-<h5 style="text-align:left"><img src="ratana007.png" width=150px >
+<h5 style="text-align:left"><img src="../../images/tee.png" width=150px >
 </h5>
 <h5 style="text-align:left">ชื่อลูกค้า :&nbsp;'.$row1['m_name'].'  <br> ที่อยู่ :&nbsp;'.$row1['o_address'].'
   </h5>
