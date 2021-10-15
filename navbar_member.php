@@ -15,32 +15,22 @@ $result_type =mysqli_query($con, $query_type) or die ("Error in query: $query_ty
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
 <a class="navbar-brand" href="index_member.php">
     <img src="backend/11.png" width="30" height="30" class="d-inline-block align-top" alt="">
-    Bootstrap
+    ตี๋การช่าง
 </a>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" href="index_member.php">หน้าหลัก <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="product_status.php">product_status<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="cart.php">cart <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
+      <li class="nav-item dropdown active">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           ประเภทสินค้า
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <?php
-		foreach ($result_type as $row )  { ?>
+        <?php	foreach ($result_type as $row )  { ?>
 
         
-          <a class="dropdown-item" href="index_member.php?act=showbytype&type_id=<?php echo $row['type_id'];?>"><?php echo $row["type_name"]; ?></a>
+          <a class="dropdown-item" href="index2.php?act=showbytype&type_id=<?php echo $row['type_id'];?>"><?php echo $row["type_name"]; ?></a>
           
         
       
@@ -49,6 +39,14 @@ $result_type =mysqli_query($con, $query_type) or die ("Error in query: $query_ty
     ?>
   </div>  
   </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="product_status.php">สถานะสินค้า<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="payment.php?total">ชำระสินค้า<span class="sr-only">(current)</span></a>
+      </li>
+      
+      
   
       
     </ul>
@@ -73,7 +71,7 @@ $result_type =mysqli_query($con, $query_type) or die ("Error in query: $query_ty
             <?php echo $m_name ?>
            </a>   
            <div class="dropdown-menu dropdown-menu-right"  >
-             <a class="dropdown-item btn btn-inverse-primary" href="#">แก้ไขข้อมูลส่วนตัว</a>
+             <a class="dropdown-item btn btn-inverse-primary" href="edit_mem.php">แก้ไขข้อมูลส่วนตัว</a>
              <div class="dropdown-divider"></div>
              <a class="dropdown-item btn btn-inverse-primary" href="index2.php">ออกจากระบบ</a>
            </div>

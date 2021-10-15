@@ -282,19 +282,31 @@
           <li class="nav-item">
             <a class="nav-link" href="../../pages/member/member.php">
               <i class="icon-head menu-icon"></i>
-              <span class="menu-title">member manage</span>
+              <span class="menu-title">ลูกค้า</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="../../pages/product_type/type.php">
               <i class="icon-head menu-icon"></i>
-              <span class="menu-title">product  type manage</span>
+              <span class="menu-title">ประเภทสินค้า</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="../../pages/product/product.php">
               <i class="icon-head menu-icon"></i>
-              <span class="menu-title">product manage</span>
+              <span class="menu-title">สินค้า</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../pages/status/status.php">
+              <i class="icon-head menu-icon"></i>
+              <span class="menu-title">ตรวจสอบหลักฐานการโอน</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../pages/order/Data_order.php">
+              <i class="icon-head menu-icon"></i>
+              <span class="menu-title">ข้อมูลการสั่งซื้อ</span>
             </a>
           </li>
           <li class="nav-item">
