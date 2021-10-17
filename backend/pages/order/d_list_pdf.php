@@ -40,6 +40,7 @@ $id = $_GET['id'];
 	if (mysqli_num_rows($result) > 0) {
 		$i = 1;
 		while($row = mysqli_fetch_assoc($result)) {
+			$sum = $row['p_price'] * $row['d_quantity'];
 			$content .= '<tr style="border:1px solid #000;">
 				<td style="border-right:1px solid #000;padding:3px;text-align:center;"  >'.$i.'</td>
 				<td style="border-right:1px solid #000;padding:3px;text-align:center;" >'.$row['p_code'].'</td>
@@ -47,7 +48,7 @@ $id = $_GET['id'];
 				<td style="border-right:1px solid #000;padding:3px;"  >'.$row['p_name'].'</td>
 				<td style="border-right:1px solid #000;padding:3px;text-align:center;"  >'.$row['d_quantity'].'</td>
 				<td style="border-right:1px solid #000;padding:3px;text-align:right;"  >'.number_format($row['p_price'],2).'</td>
-				<td style="border-right:1px solid #000;padding:3px;text-align:right;"  >'.number_format($row['d_total'],2).'</td>
+				<td style="border-right:1px solid #000;padding:3px;text-align:right;"  >'.number_format($sum, 2).'</td>
 			</tr>';
 			$i++;
 		}
