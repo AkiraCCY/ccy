@@ -30,7 +30,7 @@ $result_type =mysqli_query($con, $query_type) or die ("Error in query: $query_ty
         <?php	foreach ($result_type as $row )  { ?>
 
         
-          <a class="dropdown-item" href="index2.php?act=showbytype&type_id=<?php echo $row['type_id'];?>"><?php echo $row["type_name"]; ?></a>
+          <a class="dropdown-item" href="index_member.php?act=showbytype&type_id=<?php echo $row['type_id'];?>"><?php echo $row["type_name"]; ?></a>
           
         
       

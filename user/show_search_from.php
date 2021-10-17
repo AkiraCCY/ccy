@@ -73,7 +73,7 @@ include_once('condb.php');
   font-family: 'Poppins', sans-serif;
 }
 
-body{
+/* body{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,7 +83,7 @@ body{
 
 .containerb{
   position: relative;
-}
+} */
 
 .containerb .cardb{
   position: relative;

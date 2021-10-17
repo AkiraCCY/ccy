@@ -3,232 +3,245 @@
 include_once('condb.php');
 
 ?>
-<?php $query_product = "SELECT * FROM tbl_product as p 
+
+<head>
+<title>ระบบร้านค้าออนไลน์</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+</head>
+</br>
+<h4> ประเภทสินค้า </h4>
+<?php
+
+$type_id = $_GET['type_id'];
+
+ $query_product = "SELECT * FROM tbl_product as p 
  INNER JOIN tbl_type as t
  ON p.type_id = t.type_id 
-ORDER BY p.p_id DESC";
-
+ where p.type_id = $type_id
+ORDER BY p.p_id ASC";
 	$result_pro =mysqli_query($con, $query_product) or die ("Error in query: $query_product " . mysqli_error());
-		// echo($query_product);
-        // exit()
-        ?>
-        <?php foreach ($result_pro as $row_pro) {?>
-
-
-<section class="card_2s-wrapper">
-  <div class="card_2-grid-space">
-    <a class="card_2" href="show_search_from.php?id=<?php echo $row_pro['type_id']?>"  style="--bg-img: url('super/super02.png')">
-    <img src="backend/p_img/<?php echo $row_pro ['p_img']?> " class="card-img-top " alt="" width="600" height="220" >
-    
-      <div>
-        <h1 href="show_search_from.php?id=<?php echo $row_pro['type_id']?>" class=" list-group-item-action "><?php echo $row_pro ['type_name']?></h1>
-        </br>
-        
-        
        
+?>
+
+<?php foreach ($result_pro as $row_pro) {?>
+  
+<div class="containerb">
+<div class="col-md-12 pl-0" ></br>
+  <div class="cardb">
+    <div class="imgBx">
+    
+    <img src="backend/p_img/<?php echo $row_pro ['p_img']?> " alt="" width="220px" height="175" >
+    </div>
+    <div class="contentBx">
+    <div class="p" style=" color:#707071; text-align: left;font-size: 18px">
+    <?php echo $row_pro ['p_name']?>
+    
+    </div>
+</br>
+      <div style=" color: red; text-align: right; font-size:18px;">
+      ฿<?php echo number_format ($row_pro ['p_price'], 2); ?>
+      
       </div>
+      <div  style=" color: #red; text-align: center;  ">
+     <a href="product2.php?id=<?php echo $row_pro['p_id']?>">  <button type="button" class="btn btn-primary btn-rounded btn-fw"  >กดเลยก็แล้วกัน</button>
     </a>
+    </div>
+    </div>
   </div>
-  
-  
-</section>
-<?php } ?> 
-
-
-
+</div>
+</div>   
+<?php } ?>
+<!-- &nbsp -->
 <style>
+
+
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+.containerb .cardb{
+  position: relative;
+  width: 213px;
+  height: 340px;
+  left:45%;
   
-
-:root {
-  --color: #3c3163;
-  --transition-time: 0.5s;
+  background: #ffffff;
+  border-radius: 10px;
+  border: 2px solid #EBDEF0;
+  overflow: hidden;
+  box-shadow: 2px 2px 15px #dcdcdc;
 }
 
-* {
-  box-sizing: border-box;
+.containerb .cardb:after{
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: -20%;
+  font-size: 12em;
+  font-weight: 800;
+  font-style: italic;
+  color:#red
+}
+/* รูป */
+.containerb .cardb .imgBx{
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  
+  width: 200px;
+  height: 180px;
+  transition: 0.5s;
 }
 
-body {
-    display: flex;
+.containerb .cardb:hover .imgBx{
+  top: 0%;
+  transform: translateY(0%);
+    
+}
+
+.containerb .cardb .imgBx img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  width: 320px;
+}
+/* text */
+.containerb .cardb .contentBx{
+  left: 2%;
+  position: absolute;
+  bottom: 0;
+ width: 190px; 
+  height: 100px;
+  transition: 1s;
+  z-index: 10;
+  
+  
+}
+
+.p {
+  display: -webkit-box;
+-webkit-line-clamp: 1;
+-webkit-box-orient: vertical;
+overflow: hidden;
+     overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.containerb .cardb:hover .contentBx{
+  height: 150px;
+
+}
+
+.containerb .cardb .contentBx h2{
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #red;
+  margin: 0;
+}
+
+.containerb .cardb .contentBx .size, .containerb .cardb .contentBx .color {
+  display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  padding: 8px 20px;
+  transition: 0.5s;opacity: 0;
+  visibility: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
   
+}
+
+.containerb .cardb:hover .contentBx .size{
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
   
 }
 
-a {
-  color: inherit;
+.containerb .cardb:hover .contentBx .color{
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.6s;
+  
 }
 
-.card_2s-wrapper {
-  position: relative;
-  width: 250px;
-  height: 380px;
-  left: 25%;
+.containerb .cardb .contentBx .size h3, .containerb .cardb .contentBx .color h3{
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: 10px;
 }
 
-.card_2 {
-  font-family: 'Heebo';
-  --bg-filter-opacity: 0.5;
-  background-image: linear-gradient(rgba(0,0,0,var(--bg-filter-opacity)),rgba(0,0,0,var(--bg-filter-opacity))), var(--bg-img);
-  width: 300px;
-  height:400px;
-  font-size: 1.5em;
-  color: white;
-  border-radius: 1em;
-  padding: 1em;
-  /*margin: 2em;*/
-  display: flex;
-  align-items: flex-end;
-  background-size: cover;
-  background-position: center;
-  box-shadow: 0 0 5em -1em black;
-  transition: all, var(--transition-time);
-  position: relative;
-  overflow: hidden;
-  border: 10px solid #ccc;
-  text-decoration: none;
+.containerb .cardb .contentBx .size span{
+  width: 26px;
+  height: 26px;
+  text-align: center;
+  line-height: 26px;
+  font-size: 14px;
+  display: inline-block;
+  color: #111;
+  background: #fff;
+  margin: 0 5px;
+  transition: 0.5s;
+  color: #111;
+  border-radius: 4px;
+  cursor: pointer;
+  
 }
 
-.card_2:hover {
-  transform: rotate(0);
+.containerb .cardb .contentBx .size span:hover{
+  background: #9bdc28;
 }
 
-.card_2 h1 {
-  margin: 0;
-  font-size: 1.5em;
-  line-height: 1.2em;
-}
-
-.card_2 p {
-  font-size: 0.75em;
-  font-family: 'Open Sans';
-  margin-top: 0.5em;
-  line-height: 2em;
-}
-
-.card_2 .tags {
-  display: flex;
-}
-
-.card_2 .tags .tag {
-  font-size: 0.75em;
-  background: rgba(255,255,255,0.5);
-  border-radius: 0.3rem;
-  padding: 0 0.5em;
-  margin-right: 0.5em;
-  line-height: 1.5em;
-  transition: all, var(--transition-time);
-}
-
-.card_2:hover .tags .tag {
-  background: var(--color);
-  color: white;
-}
-
-.card_2 .date {
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-size: 0.75em;
-  padding: 1em;
-  line-height: 1em;
-  opacity: .8;
-}
-
-.card_2:before, .card_2:after {
-  content: '';
-  transform: scale(0);
-  transform-origin: top left;
+.containerb .cardb .contentBx .color span{
+  width: 20px;
+  height: 20px;
+  background: #ff0;
   border-radius: 50%;
-  position: absolute;
-  left: -50%;
-  top: -50%;
-  z-index: -5;
-  transition: all, var(--transition-time);
-  transition-timing-function: ease-in-out;
+  margin: 0 5px;
+  cursor: pointer;
 }
 
-.card_2:before {
-  background: #ddd;
-  width: 250%;
-  height: 250%;
+.containerb .cardb .contentBx .color span:nth-child(2){
+  background: #9bdc28;
 }
 
-.card_2:after {
-  background: white;
-  width: 200%;
-  height: 200%;
+.containerb .cardb .contentBx .color span:nth-child(3){
+  background: #03a9f4;
 }
 
-.card_2:hover {
-  color: var(--color);
+.containerb .cardb .contentBx .color span:nth-child(4){
+  background: #e91e63;
 }
 
-.card_2:hover:before, .card_2:hover:after {
-  transform: scale(1);
+.containerb .cardb .contentBx a{
+  display: inline-block;
+  padding: 10px 20px;
+  background: #fff;
+  border-radius: 4px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 600px;
+  color: #111;
+
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s;
+  margin-top: 0;
 }
 
-.card_2-grid-space .num {
-  font-size: 3em;
-  margin-bottom: 1.2rem;
-  margin-left: 1rem;
-}
-
-.info {
-  font-size: 1.2em;
-  display: flex;
-  padding: 1em 3em;
-  height: 3em;
-}
-
-.info img {
-  height: 3em;
-  margin-right: 0.5em;
-}
-
-.info h1 {
-  font-size: 1em;
-  font-weight: normal;
-}
-
-/* MEDIA QUERIES */
-@media screen and (max-width: 1285px) {
-  .card_2s-wrapper {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .card_2s-wrapper {
-    grid-template-columns: 1fr;
-  }
-  .info {
-    justify-content: center;
-  }
-  .card_2-grid-space .num {
-    /margin-left: 0;
-    /text-align: center;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .card_2s-wrapper {
-    padding: 4rem 2rem;
-  }
-  .card_2 {
-    max-width: calc(100vw - 4rem);
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .info {
-    display: block;
-    text-align: center;
-  }
-  .info h1 {
-    margin: 0;
-  }
+.containerb .cardb:hover .contentBx a{
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0.75s;
+  
 }
 </style>

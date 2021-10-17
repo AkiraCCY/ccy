@@ -46,7 +46,7 @@ ORDER BY p.p_id DESC";
         
     
       
-        &nbsp&nbsp&nbsp ราคา:  &nbsp <div style=" color: #FF0000;"href="product.php?id=<?php echo $row_pro['p_id']?>"><?php echo number_format ($row_pro ['p_price'], 2); ?>&nbspบาท</div>
+      &nbsp&nbsp&nbsp ราคา:  &nbsp <div style=" color: #FF0000;"href="product.php?id=<?php echo $row_pro['p_id']?>"><?php echo number_format ($row_pro ['p_price'], 2); ?>&nbspบาท</div>
         
        
         

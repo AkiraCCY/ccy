@@ -14,7 +14,7 @@ $result_type =mysqli_query($con, $query_type) or die ("Error in query: $query_ty
 
 <body>
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light" >
-<a class="navbar-brand" href="#">
+<a class="navbar-brand" href="index2.php">
     <img src="backend/images/tee.png" width="100" height="30" class="d-inline-block align-top" alt="">
     
 </a>
@@ -33,7 +33,7 @@ $result_type =mysqli_query($con, $query_type) or die ("Error in query: $query_ty
 		foreach ($result_type as $row )  { ?>
 
         
-          <a class="dropdown-item" href="index.php?act=showbytype&type_id=<?php echo $row['type_id'];?>"><?php echo $row["type_name"]; ?></a>
+          <a class="dropdown-item" href="index2.php?act=showbytype&type_id=<?php echo $row['type_id'];?>"><?php echo $row["type_name"]; ?></a>
           
         
       

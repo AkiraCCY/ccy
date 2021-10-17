@@ -79,7 +79,7 @@ include('condb.php');
           if ($act == 'showbytype'){
             
    
-            include('show_product_type.php'); 
+            include('show_type.php'); 
           }elseif ($act == 'member'){
 
            include('member_form_add.php'); 
