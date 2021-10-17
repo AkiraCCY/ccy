@@ -1,7 +1,7 @@
 <meta charset="UTF-8">
 <?php
 //1. เชื่อมต่อ database: 
-include('condb.php');  //ไฟล์เชื่อมต่อกับ database ที่เราได้สร้างไว้ก่อนหน้าน้ี
+include('../../condb.php');  //ไฟล์เชื่อมต่อกับ database ที่เราได้สร้างไว้ก่อนหน้าน้ี
   //Set ว/ด/ป เวลา ให้เป็นของประเทศไทย
     date_default_timezone_set('Asia/Bangkok');
 	//สร้างตัวแปรวันที่เพื่อเอาไปตั้งชื่อไฟล์ที่อัพโหลด
@@ -35,7 +35,7 @@ $row = mysqli_fetch_array($result2);
 	if($upload !='') { 
  
 	//โฟลเดอร์ที่เก็บไฟล์
-	$path="p_img/";
+	$path="../../p_img/";
 	//ตัวขื่อกับนามสกุลภาพออกจากกัน
 	$type = strrchr($_FILES['p_img']['name'],".");
 	//ตั้งชื่อไฟล์ใหม่เป็น สุ่มตัวเลข+วันที่

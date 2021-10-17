@@ -48,50 +48,97 @@ $member_id = $_SESSION['member_id'];
 
 
       </div>
-       
-      <div class="col-md-10">
+   
+  <div class="content">
+    <br>
+      <div class="col-md-12">
       <h3>&nbsp;&nbsp;แก้ไขข้อมูลส่วนตัว</h3>
-<div class="form-group">
-          <div class="col-sm-5" align="left">
+<div class="form-group" align="center">
+          <div class="col-sm-10" align="left">
               <p>Username</p>
             <input  name="m_user" type="text" required class="form-control" id="mem_username" value="<?php echo $row['m_user'];?>" placeholder="Username" pattern="^[a-zA-Z0-9]+$" title="ภาษาอังกฤษหรือตัวเลขเท่านั้น" minlength="2"  />
           </div>
       </div> 
-        <div class="form-group">
-          <div class="col-sm-5" align="left">
+        <div class="form-group"align="center">
+          <div class="col-sm-10" align="left">
           <p>Password</p>
             <input  name="m_pass" type="password" required class="form-control" id="mem_password" value="<?php echo $row['m_pass'];?>"placeholder="Password" pattern="^[a-zA-Z0-9]+$" minlength="2" />
           </div>
         </div>
-        <div class="form-group">
-          <div class="col-sm-5" align="left">
+        <div class="form-group"align="center">
+          <div class="col-sm-10" align="left">
           <p>ชื่อ-นามสกุล</p>
             <input  name="m_name" type="text" required class="form-control" id="mem_name" value="<?php echo $row['m_name'];?>" placeholder="ชื่อ-สกุล " />
           </div>
         </div>
-        <div class="form-group">
-          <div class="col-sm-5" align="left">
+        <div class="form-group"align="center">
+          <div class="col-sm-10" align="left">
           <p>E-mail</p>
             <input  name="m_email" type="email" class="form-control" id="mem_email" value="<?php echo $row['m_email'];?>"  placeholder=" อีเมล์ name@hotmail.com"/>
           </div>
         </div>
-        <div class="form-group">
-          <div class="col-sm-5" align="left">
+        <div class="form-group"align="center">
+          <div class="col-sm-10" align="left">
           <p>เบอร์โทร</p>
             <input  name="m_tel" type="text" class="form-control" id="mem_tel" value="<?php echo $row['m_tel'];?>" placeholder="เบอร์โทร ตัวเลขเท่านั้น" />
           </div>
         </div>
-        <div class="form-group">
-          <div class="col-sm-5" align="left">
+        <div class="form-group"align="center">
+          <div class="col-sm-10" align="left">
           <p>ที่อยู่</p>
-            <textarea name="m_address" class="form-control" id="mem_address"" placeholder="ที่อยู่" required><?php echo $row['m_address'];?> </textarea> 
+            <textarea name="m_address" class="form-control" id="mem_address" placeholder="ที่อยู่" required><?php echo $row['m_address'];?> </textarea> 
           </div>
         </div>
-      <div class="form-group">
-          <div class="col-sm-5" align="right">
-          <button type="submit" class="btn btn-success" id="btn"><span class="glyphicon glyphicon-ok"></span> แก้ไข  </button>
+      <div class="form-group"align="center">
+          <div class="col-sm-8" align="right">
+          <button type="submit" class="btn btn-primary" id="btn"><span class="glyphicon glyphicon-ok"></span> แก้ไข  </button>
           </div>     
       </div>
 </div>
 </div>
+</div>
+
       </form>
+
+      <style>
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;900&display=swap');
+
+body {
+  background: #f2f2f2;
+}
+
+.container  {
+  position: absolute;
+  left: 50%;
+  top: 52%;
+  transform: translate(-50%, -50%);
+  height: 80%;
+  width: 30%;
+  background: #f2f2f2;
+  overflow: hidden;
+  border-radius: 20px;
+
+  box-shadow: 0 0 20px 8px #d0d0d0;
+}
+
+.content {
+ 
+  
+  
+  text-align: center;
+  
+
+  
+}
+
+h1 {
+  font-weight: 900;
+  text-align: center;
+}
+
+h3 {
+  font-weight: 300;
+}
+
+
+</style>

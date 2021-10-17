@@ -52,8 +52,10 @@
                 </div>
                 
               <div class="form-group">
-          <div class="col-sm-5" align = "right">
+          <div class="col-sm-8" align = "right">
           <button type="submit" class="btn btn-success"  id="btn"><span class="glyphicon glyphicon-ok"></span> สมัครสมาชิก  </button>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a type="button" class="btn btn-danger" href="index2.php"  > ยกเลิก  </a>
           </div>     
       </div>
       </form>

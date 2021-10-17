@@ -2,7 +2,7 @@
 <?php
 $ems= $_POST['p_price'];
 $ems1= $_GET['id'];
-include('condb.php'); 
+include('../../condb.php'); 
 
 $sql = "UPDATE tbl_order_detail SET  
 o_status='กำลังจัดส่ง',
@@ -19,7 +19,7 @@ $result1 = mysqli_query($con, $sql1) or die ("Error in query: $sql1 " . mysqli_e
 if($result1){
     echo "<script type='text/javascript'>";
     // echo "alert('Update Succesfuly');";
-    echo "window.location = 'email.php?id=$ems1 '; ";
+    echo "window.location = 'status.php'; ";
     echo "</script>";
     }
     else{

@@ -2,7 +2,7 @@
 <?php
     
 $ems1= $_GET['id'];
-include('condb.php'); 
+include('../../condb.php'); 
 
 $sql = "UPDATE tbl_order_detail SET  
 o_status='รายการสั่งซื้อถูกยกเลิก'

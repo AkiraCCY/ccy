@@ -27,11 +27,11 @@ $tal_basic  =(isset($_POST['tal_basic']) ? $_POST['tal_basic'] :'');
 $upload=$_FILES['d_img'];
 	if($upload <> '') {
 
-	$path="backend/p_img/";
+  $path="backend/d_img/";
 	$type = strrchr($_FILES['d_img']['name'],".");
 	$newname ='d_img'.$numrand.$date1.$type;
 	$path_copy=$path.$newname;
-	$path_link="d_img/".$newname;
+	$path_link="d_img".$newname;
 	move_uploaded_file($_FILES['d_img']['tmp_name'],$path_copy);
     }
 

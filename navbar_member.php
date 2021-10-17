@@ -1,6 +1,7 @@
 <?php
 include('condb.php');
 $m_name =  $_SESSION["m_name"];
+$m_id = $_SESSION['member_id'];
 ?>
 <?php $query_product = "SELECT * FROM tbl_type
 order by type_id DESC";
@@ -38,11 +39,16 @@ $result_type =mysqli_query($con, $query_type) or die ("Error in query: $query_ty
     ?>
   </div>  
   </li>
+      
       <li class="nav-item active">
-        <a class="nav-link" href="product_status.php">สถานะสินค้า<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="payment.php">ชำระสินค้า<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="payment.php?total">ชำระสินค้า<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="product_status.php">ตรวจสอบสินค้า<span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="adout.php">เกี่ยวกับ<span class="sr-only">(current)</span></a>
       </li>
       
       

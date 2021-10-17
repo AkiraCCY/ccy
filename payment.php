@@ -4,7 +4,7 @@ include('link.php');
 include('navbar_member.php');
  
 $m_id = $_SESSION['member_id'];
-$total= $_GET['total'];
+
 
 error_reporting( error_reporting() & ~E_NOTICE );
 $sql1 = "SELECT * FROM tbl_product_detail as d
@@ -51,6 +51,7 @@ $row1 = mysqli_fetch_array($result);
                             <tbody>
                                 <?php
                                $sum = 0;
+                               $sum2 = 0;
                                 while ($row0 = mysqli_fetch_array($result1)) {
                                     $total_price = $total_price + $row0['d_total'];
                                     
@@ -82,7 +83,7 @@ $row1 = mysqli_fetch_array($result);
                                        
                                             <?php
                                             $sum = $row0["d_quantity"] * $row0["p_price"];
-                                            
+                                            $sum2 = $sum2 + $sum;
                                             echo number_format($sum, 2);  ?>
                                         </td>
                                     </tr>
@@ -146,7 +147,7 @@ $row1 = mysqli_fetch_array($result);
                                     </td>
                               <?php    $ff=50;   
                                
-                               $total_price=$total + $ff;
+                               $total_price=$sum2 + $ff;
                                
                                    ?>
             </table>
@@ -166,7 +167,7 @@ $row1 = mysqli_fetch_array($result);
                                 <h6> หลักฐานการชำระเงิน </h6>    <input type="file" name="d_img" id="d_img" class="form-control" required/>
                                 <br>
                                     
-                                    <h5 style=" text-align: right;">รวมราคาสินค้า <?php echo number_format($total,2); ?> บาท</h5>
+                                    <h5 style=" text-align: right;">รวมราคาสินค้า <?php echo number_format($sum2,2); ?> บาท</h5>
                                     <h5 style=" text-align: right;">ค่าจัดส่ง 50.00 บาท</h5>
                                     <h5 style=" text-align: right;">รวมราคาสุทธิ <?php echo number_format($total_price,2); ?> บาท</h5>
                                     <input type="hidden" name="total" value="<?php echo $total_price;?>">

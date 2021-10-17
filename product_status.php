@@ -23,6 +23,16 @@ WHERE d.member_id = '$m_id'  ";
 $result2 = mysqli_query($con,$query1 )or die("Error in query: $query1 ".mysqli_error());
 $row1 = mysqli_fetch_array($result2);
 ?>
+
+  <link rel="stylesheet" href="../../vendors/datatables.net/semantic.min.css">
+   <link rel="stylesheet" href="../../vendors/datatables.net/dataTables.semanticui.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<style>
+    table.dataTable thead{
+        background: linear-gradient(to right, #fcb845, #fd1d1d, #833ab4);
+        color:white;
+    }
+  </style>
 </br></br></br>
                             
 <hr>
@@ -141,3 +151,11 @@ $row1 = mysqli_fetch_array($result2);
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
+
+
+
+ 
+
+
+  
+

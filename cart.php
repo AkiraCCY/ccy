@@ -94,7 +94,9 @@ $total2 = 0;
                     </div>
                     <div class="col">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                          ฿<?php echo number_format($row_pro["p_price"], 2); ?></div>
-                    <div class="col"> <a href="#">-</a><?php echo $row_pro['d_quantity']?><a href="#">+</a> </div>
+                    <div class="col"> 
+                    <?php echo $row_pro['d_quantity']?>
+                    </div>
                     <div class="col"> <a href="cart.php?action=delete&id=<?php echo $row_pro["p_id"]; ?>"><span class="text-danger">ลบ</span></a></div>
                 </div>
             </div>
@@ -110,7 +112,7 @@ $total2 = 0;
 					?>
                     
                         <br><br>
-                        <div class="back-to-shop"><a href="index_member.php">&leftarrow;</a><span class="text-muted">Back to shop</span></div>
+                        <div class="back-to-shop"><a href="index_member.php">&leftarrow; Back to shop</a></div>
         </div>
         <div class="col-md-4 summary">
             <div>

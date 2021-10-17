@@ -1,6 +1,6 @@
 <?php
 //1. เชื่อมต่อ database:
-include('condb.php');  //ไฟล์เชื่อมต่อกับ database ที่เราได้สร้างไว้ก่อนหน้าน้ี
+include('../../condb.php');  //ไฟล์เชื่อมต่อกับ database ที่เราได้สร้างไว้ก่อนหน้าน้ี
 $p_id = $_GET["ID"];
 //2. query ข้อมูลจากตาราง:
 $sql = "SELECT p.*,t.type_name
@@ -59,7 +59,7 @@ $result = mysqli_query($con, $query);
             <div class="form-group">
           <div class="col-sm-12">
             <p> ภาพสินค้า </p>
-            <img src="p_img/<?php echo $row['p_img'];?>" width="100px">
+            <img src="../../p_img/<?php echo $row['p_img'];?>" width="100px">
             <br>
             <br>
             <input type="file" name="p_img" id="p_img" class="form-control" />
