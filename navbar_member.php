@@ -14,13 +14,15 @@ $result_type =mysqli_query($con, $query_type) or die ("Error in query: $query_ty
 ?>
 <body>
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-<a class="navbar-brand" href="index_member.php">
-<img src="backend/images/tee.png" width="100" height="30" class="d-inline-block align-top" alt="">
-</a>
+
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <li class="nav-item active">
-        <a class="nav-link" href="index_member.php">หน้าหลัก <span class="sr-only">(current)</span></a>
+      <a class="navbar-brand" href="index_member.php">
+<img src="backend/images/tee2.png" width="80" height="30" class="d-inline-block align-top" alt="">
+</a>
       </li>
       <li class="nav-item dropdown active">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
