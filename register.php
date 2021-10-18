@@ -59,7 +59,7 @@
                 <div class="form-group"align="center">
           <div class="col-sm-10" align="left">
                   <label for="exampleTextarea1">เบอร์โทร</label>
-                  <input type="text"  name="mem_tel" class="form-control form-control-lg" id="mem_tel" placeholder="Phone">
+                  <input type="text" id="m_tel" name="salary" class="form-control" maxlength="10"oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" / placeholder="เบอร์โทร ตัวเลขเท่านั้น"  required>
                 </div>
                 </div>
                 <div class="form-group"align="center">

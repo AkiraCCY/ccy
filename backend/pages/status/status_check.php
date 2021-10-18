@@ -52,8 +52,12 @@ $query = "SELECT * FROM tbl_product_detail as d
   <style>
 
 </style>
-</head>
+
 <div class="">
+</head>
+  
+  </br>
+  </br>
       <div class="col-md-12">
 <table class="table table-bordered table-striped">
                             <thead>
