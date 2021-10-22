@@ -97,7 +97,7 @@ table.dataTable thead .sorting_desc:after {
         <!-- Left side column. contains the logo and sidebar -->
         
       </div>
-       
+      &nbsp;&nbsp;&nbsp;&nbsp;
       <div class="col-md-10">
       <a href="product.php?act=add" class="btn-info btn-sm" > เพิ่ม</a>
       <p></p>

@@ -6,7 +6,7 @@
 <head>
 <?php include('../../link.php'); error_reporting( error_reporting() & ~E_NOTICE );?>
 <style>
-  <style>
+ 
 
 
 table.dataTable thead .sorting:after,

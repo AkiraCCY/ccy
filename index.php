@@ -1,3 +1,4 @@
+<title>ตี๋ การช่าง</title>
 <body>
 
 <a type="button" href="index2.php"><button class="big-button" >Shop</button></a>

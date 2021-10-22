@@ -25,10 +25,58 @@ $query = "SELECT * FROM tbl_product_detail as d
 		});
 		});
 		</script>
+    <style>
+ 
+
+
+ table.dataTable thead .sorting:after,
+ table.dataTable thead .sorting_asc:after,
+ table.dataTable thead .sorting_desc:after,
+ table.dataTable thead .sorting_asc_disabled:after,
+ table.dataTable thead .sorting_desc_disabled:after {
+   position: absolute;
+   bottom: 8px;
+   right: 8px;
+   left: 8px;
+   display: block;
+   font-family: 'Glyphicons Halflings';
+   opacity: 0;
+ }
+ table.dataTable thead .sorting:after {
+   opacity: 0;
+     /* sort */
+ }
+ table.dataTable thead .sorting:before {
+   opacity: 0;
+   
+   /* sort */
+ }
+ table.dataTable thead .sorting_asc:after {
+   content: "\e155";
+   /* sort-by-attributes */
+ }
+ table.dataTable thead .sorting_desc:after {
+   content: "\e156";
+   /* sort-by-attributes-alt */
+ }
+ 
+ 
+     .content {display:none;}
+     .preload { width:100px;
+       height: 200px;
+       position: fixed;
+       top: 30%;
+       left: 45%;
+     }
+ 
+     table.dataTable td {
+   font-size: 1em;
+ }
+ </style>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Skydash Admin</title>
+  <title>ตี๋ การช่าง(Admin)</title>
   <!-- plugins:css -->
   
  
