@@ -123,10 +123,10 @@ table.dataTable thead .sorting_desc:after {
         <thead>
 
             <tr >
-                <th>Name</th>
-                <th> Email</th>
-                <th>telophon</th>
-                <th>address</th>
+                <th>ชื่อ</th>
+                <th>อีเมล</th>
+                <th>โทรศัพท์</th>
+                <th>ที่อยู่</th>
                 <th></th>
               
             </tr>

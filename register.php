@@ -21,6 +21,9 @@
    
   <div class="content">
     <br>
+    <br>
+    <br>
+    
       <div class="col-md-12">
             
       <h3>สมัครสมาชิก</h3>
@@ -28,7 +31,7 @@
      
             <div class="form-group"align="center">
           <div class="col-sm-10" align="left">
-                  <label for="exampleTextarea1">Username</label>
+                  <label for="exampleTextarea1">ชื่อผู้ใช้</label>
                   <input type="text" name="mem_username"class="form-control form-control-lg"  id="mem_username" placeholder="Username" pattern="^[a-zA-Z0-9]+$" title="ภาษาอังกฤษหรือตัวเลขเท่านั้น" minlength="2">
                 </div>
                 </div>
@@ -38,12 +41,7 @@
                   <input type="password"  name="mem_password" class="form-control form-control-lg"  id="mem_password" placeholder="Password" pattern="^[a-zA-Z0-9]+$" minlength="2">
                 </div>
                 </div>
-                <div class="form-group"align="center">
-          <div class="col-sm-10" align="left">
-                  <label for="exampleTextarea1">ยืนยันรหัสผ่าน</label>
-                  <input type="password"  name="" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="ConfirmPassword" pattern="^[a-zA-Z0-9]+$" minlength="2">
-                </div>
-                </div>
+                
                 <div class="form-group"align="center">
           <div class="col-sm-10" align="left">
                   <label for="exampleTextarea1">ชื่อ-นามสกุล</label>
@@ -52,8 +50,8 @@
                 </div>
                 <div class="form-group"align="center">
           <div class="col-sm-10" align="left">
-                  <label for="exampleTextarea1">Email</label>
-                  <input type="email"   name="mem_email" class="form-control form-control-lg"  id="mem_email" placeholder="Email">
+                  <label for="exampleTextarea1">อีเมล</label>
+                  <input type="email"   name="mem_email" class="form-control form-control-lg"  id="mem_email" placeholder="อีเมล">
                 </div>
                 </div>
                 <div class="form-group"align="center">
@@ -65,7 +63,7 @@
                 <div class="form-group"align="center">
           <div class="col-sm-10" align="left">
                   <label for="exampleTextarea1">ที่อยู่</label>
-                  <textarea class="form-control"  name="mem_address" id="mem_address" rows="2"></textarea>
+                  <textarea class="form-control"  name="mem_address" id="mem_address" rows="2" placeholder="ที่อยู่"></textarea>
                 </div>
                 </div>
 </br>

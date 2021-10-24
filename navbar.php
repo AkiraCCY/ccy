@@ -85,7 +85,7 @@ $result_type =mysqli_query($con, $query_type) or die ("Error in query: $query_ty
     <div class="modal-dialog" role="document">
           <div class="modal-content"> 
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+              <h5 class="modal-title" id="exampleModalLabel" >เข้าสู่ระบบ</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -94,11 +94,11 @@ $result_type =mysqli_query($con, $query_type) or die ("Error in query: $query_ty
               
 
                 <div class="form-group">
-                  <label for="m_name" class="col-form-label">user name:</label>
+                  <label for="m_name" class="col-form-label">ชื่อผู้ใช้:</label>
                   <input type="text" class="form-control" id="m_name" name="m_user" required>
                 </div>
                 <div class="form-group">
-                  <label for="m_name" class="col-form-label">Password:</label>
+                  <label for="m_name" class="col-form-label">รหัสสินค้า:</label>
                   <input type="password" class="form-control"  id="m_pass" name="m_pass" required >
                 </div>
                
