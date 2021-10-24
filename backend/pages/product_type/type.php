@@ -108,7 +108,7 @@ table.dataTable thead .sorting_desc:after {
                     <div class="template-demo">
                         <button onclick="addRow()" type="button" class="btn btn-info btn-icon-text">
                           <i class="ti-upload btn-icon-prepend"></i>                                                    
-                          add product type
+                          เพิ่มประเภทสินค้า
                         </button>
                         </div>    
                     </div>

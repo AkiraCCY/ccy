@@ -99,7 +99,10 @@ table.dataTable thead .sorting_desc:after {
       </div>
       &nbsp;&nbsp;&nbsp;&nbsp;
       <div class="col-md-10">
-      <a href="product.php?act=add" class="btn-info btn-sm" > เพิ่ม</a>
+        
+      <a href="product.php?act=add" class="btn btn-info btn-icon-text">
+                          <i class="ti-upload btn-icon-prepend"></i>                                                    
+                          เพิ่ม</a>
       <p></p>
       </br>
       <?php

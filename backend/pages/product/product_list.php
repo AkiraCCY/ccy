@@ -97,85 +97,13 @@ table.dataTable thead .sorting_desc:after {
   <th width="16%">ราคาสินค้า (บาท)</th> 
   <th width="20%">รูปสินค้า</th>
   <th width="20%">จำนวนสินค้า</th>
-  <th width="15%">แก้ไข</th>
-  <th width="15%">ลบ</th>
+  <th width="15%"></th>
+  
 
 </tr>
 </thead>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Update Data</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-            <form  name="addproduct" action="product_form_edit_db.php" method="POST" enctype="multipart/form-data"  class="form-horizontal">
-        <div class="form-group">
-        <div class="form-group">
-          <div class="col-sm-9">
-            <p> รหัสสินค้า</p>
-            <input type="text"  name="p_code" class="form-control" required placeholder="รหัสสินค้า" value="<?php echo $row ["p_code"]; ?>"readonly/>
-          </div>
-        </div>
-          <div class="col-sm-9">
-          
-            <p> ชื่อสินค้า </p>
-            <input type="text"  name="p_name" class="form-control" required placeholder="ชื่อสินค้า" / value="<?php echo  $row ['p_name']?>">
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="col-sm-9">
-            <p> ราคา</p>
-            <input type="text"  name="p_price" class="form-control" required placeholder="ราคา" / value="<?php echo  $row ['p_price']?>">
-          </div>
-        </div>
-         
-        
-        <div class="form-group">
-          <div class="col-sm-12">
-            <p> รายละเอียดสินค้า </p>
-             <textarea type ="text" name="p_detail" rows="5" cols="50" ><?php echo $row ["p_detail"]; ?>
-             </textarea>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="col-sm-12">
-            <p> จำนวนสินค้า </p>
-            <input type="number" name="p_quantity" min="1"step="1"  value="<?php echo $row ["p_quantity"]; ?>">
-           
-             
-          </div>
-        </div>
-            <div class="form-group">
-          <div class="col-sm-12">
-            <p> ภาพสินค้า </p>
-            <img src="../../p_img/<?php echo $row['p_img'];?>" width="100px">
-            <br>
-            <br>
-            <input type="file" name="p_img" id="p_img" class="form-control" />
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="col-sm-12">
-             <input type="hidden" name="p_id" value="<?php echo $p_id; ?>" />
-             <input type="hidden" name="img2" value="<?php echo $p_img; ?>" />
-            <button type="submit" class="btn btn-success" name="btnadd"> บันทึก </button>
-            
-          </div>
-        </div>
-      </form>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" onclick="editRow()" class="btn btn-primary">Update</button>
-            </div>
-          </div>
-        </div>
-      </div>
+
                 
 <?php while ($row =  mysqli_fetch_assoc($result)) { ?>
   <tr >
@@ -186,9 +114,9 @@ table.dataTable thead .sorting_desc:after {
       <td ><img src="../../p_img/<?php echo $row ['p_img']?>" width="150" height="120"></td>
       <td ><?php echo $row["p_quantity"]; ?></td>
       
-      <td><button type="button" class="btn btn-inverse-primary btn-icon" data-toggle="modal" data-target="#exampleModal" > <i class="ti-user"></i> </button></td>
+      <td><button type="button" class="btn btn-inverse-primary btn-icon" data-toggle="modal" data-target="#exampleModal"><a href="product.php?act=edit&ID=<?php echo $row ['p_id']; ?>"><i class="ti-pencil-alt"></i> </a> </button>
       
-      <td><a href="product_del_db.php?ID=<?php echo $row['p_id']; ?>" class='btn btn-danger btn-sm'  onclick="return confirm('ยันยันการลบ')">ลบ</a> </td>
+      <button type="button" class="btn btn-inverse-danger btn-icon" data-toggle="modal" ><a href="product_del_db.php?ID=<?php echo $row['p_id']; ?>"   onclick="return confirm('ยันยันการลบ')"><i class="ti-trash"></i></a></button> </td>
     </tr>
     <?php }  ?>
   
