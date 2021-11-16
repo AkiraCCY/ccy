@@ -60,13 +60,13 @@ $row1 = mysqli_fetch_array($result);
                                         <td>
                                            
                                         <img src="backend/p_img/<?php echo $row0['p_img']?> " name="img"  value= "<?php echo $row0['p_img']?> "width="90" height="60">
-                                            </a>
+                                           
                                         </td>
                                         <td>
-                                            
+                                        <div style="width:200px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;" >
                                                 <?php echo $row0['p_name']; ?>
                                                 <input type="hidden" name="" value="<?php echo $row0['p_id']?>"> 
-                                            </a>
+                                                </div>
                                         </td>
                                         </td>
                                       

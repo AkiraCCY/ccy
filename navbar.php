@@ -98,7 +98,7 @@ $result_type =mysqli_query($con, $query_type) or die ("Error in query: $query_ty
                   <input type="text" class="form-control" id="m_name" name="m_user" required>
                 </div>
                 <div class="form-group">
-                  <label for="m_name" class="col-form-label">รหัสสินค้า:</label>
+                  <label for="m_name" class="col-form-label">รหัสผ่าน:</label>
                   <input type="password" class="form-control"  id="m_pass" name="m_pass" required >
                 </div>
                
