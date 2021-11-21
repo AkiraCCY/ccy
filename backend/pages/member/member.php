@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
 <style>
 
 
@@ -113,7 +114,12 @@ table.dataTable thead .sorting_desc:after {
                         </div>    
                     </div>
                   </div>
-                  
+                  <form  name="addproduct" action="pdf.php" method="POST" enctype="multipart/form-data"  class="form-horizontal">
+                  <td colspan="1" style=" text-align: center;">
+                      </br>
+                  <button type="submit" class="btn btn-success" name="btnadd"  style="width:100%;height:50px"> <h4>พิมพ์ข้อมูลลูกค้า</h4> </button>
+                  </br>
+                  </form>
                 </div>
 
                 <div class="row" >

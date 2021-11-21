@@ -27,6 +27,7 @@ $row1 = mysqli_fetch_array($result);
      </div>
 <div class="container">
 <h3>&nbsp;&nbsp;&nbsp;&nbsp;ชำระเงิน</h3>
+<th><?php echo $row["timesave"]; ?></th>          
       <div class="col-md-12">
 <table class="table table-bordered table-striped">
                             <thead>

@@ -51,7 +51,9 @@ $row1 = mysqli_fetch_array($result2);
                             <thead>
                                 
                                 <tr>
+                                <th style="width=10px;text-align:center;">เลขที่ใบสั่งซื้อ</th>
                                    <th style="width=10px;text-align:center;">img</th>
+                                   <th style="width=20px;text-align:center;">รหัสสินค้า</th>
                                     <th style="width=20px;text-align:center;">สินค้า</th>
                                     <th style="text-align:center;">ราคา (บาท)</th> 
                                     <th style="text-align:center;">จำนวน (ชิ้น)</th> 
@@ -71,11 +73,20 @@ $row1 = mysqli_fetch_array($result2);
                             <tbody>
                            
                                     <tr>
-                                    
+                                    <td>
+                                           
+                                           <?php echo ($row0['o_code']); ?>
+                                               </a>
+                                           </td>
                                         <td>
                                            
                                         <img src="backend/p_img/<?php echo $row0['p_img']?> " name="img"  value= "<?php echo $row0['p_img']?> "width="90" height="60">
                                             </a>
+                                        </td>
+                                        <td>
+                                        <?php echo $row0['p_code']; ?>
+                                          
+                                           
                                         </td>
                                         <td>
                                         <?php echo $row0['p_name']; ?>
@@ -102,7 +113,7 @@ $row1 = mysqli_fetch_array($result2);
                                             
                                         </td>
                                         <td width='200px'>
-                                        <?php echo $row0['time_save']; ?>
+                                        <?php echo $row0["timesave"]; ?>
                                         </td>
                                         <td >
                                         <?php 

@@ -103,6 +103,12 @@ table.dataTable thead .sorting_desc:after {
       <a href="product.php?act=add" class="btn btn-info btn-icon-text">
                           <i class="ti-upload btn-icon-prepend"></i>                                                    
                           เพิ่ม</a>
+                          <form  name="addproduct" action="pdf.php" method="POST" enctype="multipart/form-data"  class="form-horizontal">
+                  <td colspan="1" style=" text-align: center;">
+                      </br>
+                  <button type="submit" class="btn btn-success" name="btnadd"  style="width:100%;height:50px"> <h4>พิมพ์ข้อมูลประเภทสินค้า</h4> </button>
+                  </br>
+                  </form>
       <p></p>
       </br>
       <?php

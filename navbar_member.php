@@ -50,7 +50,7 @@ $result_type =mysqli_query($con, $query_type) or die ("Error in query: $query_ty
       </li>
 
       <li class="nav-item active">
-        <a class="nav-link" href="adout.php">เกี่ยวกับ<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="adout.php">ติดต่อ<span class="sr-only">(current)</span></a>
       </li>
       
       
@@ -61,7 +61,7 @@ $result_type =mysqli_query($con, $query_type) or die ("Error in query: $query_ty
           <li class="nav-item nav-search d-none d-lg-block">
             <div class="input-group">
              
-            <form action="index2.php" method="get" >
+            <form action="index_member.php" method="get" >
                   <input class="form-control mr-sm-3" style="width: 100%;" type="search" name="act1" placeholder="Search" aria-label="Search">
                    </form>
                  </form>

@@ -85,7 +85,7 @@ include('condb.php');
            include('member_form_add.php'); 
             
           }elseif ($act1 != ''){
-            include('show_search_from.php'); 
+            include('user/show_search_from.php'); 
           }elseif ($act == 'add'){
 
 

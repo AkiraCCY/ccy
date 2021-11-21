@@ -2,6 +2,7 @@
 session_start();
 include('link.php');
 include('navbar_member.php');
+include('condb.php');
  
 $m_id = $_SESSION['member_id'];
 
@@ -17,9 +18,12 @@ $result1 = mysqli_query($con,$sql1)or die("Error in query: $sql1".mysqli_error()
 $sql = "SELECT * FROM tbl_product_detail as d
 INNER JOIN tbl_product as p ON d.p_id = p.p_id
 INNER JOIN tbl_member as m ON d.member_id = m.member_id
+INNER JOIN tbl_order_detail as o ON o.member_id = m.member_id
 WHERE m.member_id = $m_id and d.d_status = 'cart'";
 $result = mysqli_query($con,$sql)or die("Error in query: $sql".mysqli_error());
 $row1 = mysqli_fetch_array($result);
+
+
 
 ?><hr></br></br></br>
 
@@ -32,15 +36,46 @@ $row1 = mysqli_fetch_array($result);
                         <h4><b>ชำระเงิน</b></h4>
                         
                     </div>
-                                       
-                </div>
-            </div>
+              
+            <th>วันที่ : <?php
+echo "<meta charset='utf-8'>";
+function ThDate()
+{
+//วันภาษาไทย
+$ThDay = array ( "อาทิตย์", "จันทร์", "อังคาร", "พุธ", "พฤหัส", "ศุกร์", "เสาร์" );
+//เดือนภาษาไทย
+$ThMonth = array ( "มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน","พฤษภาคม", "มิถุนายน", "กรกฏาคม", "สิงหาคม","กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม" );
+ 
+//กำหนดคุณสมบัติ
+$week = date( "w" ); // ค่าวันในสัปดาห์ (0-6)
+$months = date( "m" )-1; // ค่าเดือน (1-12)
+$day = date( "d" ); // ค่าวันที่(1-31)
+$years = date( "Y" )+543; // ค่า ค.ศ.บวก 543 ทำให้เป็น ค.ศ.
+ 
+return "
+		$day  
+		$ThMonth[$months] 
+		$years";
+}
+ 
+echo ThDate(); // แสดงวันที่ 
+ 
+?></th>
+</div>
+</div>
 
+<th style="text-align: right;">เลขที่ใบสั่งซื้อ: <?php echo $row1["o_code"]; ?> </th>
+
+                     
+                
+            
+            
                         
             <table class="table table-bordered table-striped">
                             <thead>
                                 <tr>
-                                    <th>รูปสินค้า</th>
+                                    
+                                    <th>รหัสสินค้า</th>
                                     <th>สินค้า</th>
                                    
                                     <th style="text-align:center;">ราคา (บาท)</th>
@@ -57,10 +92,12 @@ $row1 = mysqli_fetch_array($result);
                                     
                                     ?>
                                     <tr>
+                                        
                                         <td>
-                                           
-                                        <img src="backend/p_img/<?php echo $row0['p_img']?> " name="img"  value= "<?php echo $row0['p_img']?> "width="90" height="60">
-                                           
+                                        <div style="width:200px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;" >
+                                                <?php echo $row0['p_code']; ?>
+                                                <input type="hidden" name="" value="<?php echo $row0['p_id']?>"> 
+                                                </div>
                                         </td>
                                         <td>
                                         <div style="width:200px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;" >

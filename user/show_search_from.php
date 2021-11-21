@@ -57,7 +57,7 @@ include_once('condb.php');
       
       </div>
       <div  style=" color: #red; text-align: center;  ">
-     <a href="product2.php?id=<?php echo $row_pro['p_id']?>">  <button type="button" class="btn btn-primary btn-rounded btn-fw"  >กดเลยก็แล้วกัน</button>
+     <a href="product2.php?id=<?php echo $row_pro['p_id']?>">  <button type="button" class="btn btn-primary btn-rounded btn-fw"  >เลือก</button>
     </a>
     </div>
     </div>
