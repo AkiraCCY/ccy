@@ -57,6 +57,7 @@ $row1 = mysqli_fetch_array($result2);
                                     <th style="width=20px;text-align:center;">สินค้า</th>
                                     <th style="text-align:center;">ราคา (บาท)</th> 
                                     <th style="text-align:center;">จำนวน (ชิ้น)</th> 
+                                    <th style="text-align:center;">ค่าสัดส่ง</th> 
                                      <th style="text-align:center;">จำนวนเงินที่ชำระ (บาท)</th>
                                     
                                    
@@ -73,7 +74,7 @@ $row1 = mysqli_fetch_array($result2);
                             <tbody>
                            
                                     <tr>
-                                    <td>
+                                    <td style="text-align:center">
                                            
                                            <?php echo ($row0['o_code']); ?>
                                                </a>
@@ -95,20 +96,24 @@ $row1 = mysqli_fetch_array($result2);
                                            
                                         </td>
 
-                                        <td>
+                                        <td style="width=20px;text-align:right;">
                                         <?php echo number_format($row0['p_price'],2); ?>
                                              </td>
                                         <td style="text-align:center" >
                                         <?php echo $row0['d_quantity']; ?>
                                          </td >
-                                        <td >
+                                         <td style="text-align:center" >
+                                        50 
+                                         </td >
+                                        
+                                        <td style="width=20px;text-align:right;">
                                         <?php
-                                          $sum = $row0["d_quantity"] * $row0["p_price"];
+                                          $sum = $row0["d_quantity"] * $row0["p_price"] + 50;
                                         echo number_format($sum,2); ?>
                                          </td >
                                         
                                        
-                                        <td width='250px'>
+                                        <td width='250px' >
                                        <p> <?php echo $row0['o_address']; ?> </p> 
                                     
                                             

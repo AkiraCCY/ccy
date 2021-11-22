@@ -134,9 +134,10 @@ echo ThDate(); // แสดงวันที่
                         </td>
                                     <tr>
                                     <th style="width: 180px;">ชื่อผู้ซื้อ</th>
-                                    <th style="width: 180px;">อีเมล</th>
+                                    <th colspan="2" style="width: 100px;text-align: left;">ที่อยู่</th>
                                     <th style="width: 180px;text-align:center;">เบอร์โทรศัพท์</th>
-                                    <th colspan="2" style="width: 100px;text-align: center;">สถานที่ติดต่อ</th>
+                                    <th style="width: 180px; text-align:center;">อีเมล</th>
+                                    
                                 
                                 </tr>
 
@@ -147,20 +148,20 @@ echo ThDate(); // แสดงวันที่
                                             
                                       
                                         </td>
-                                        <td>
+                                        
+                                        <td colspan="2"  style="text-align:left;">
+                                        <?php echo $row1['m_address']; ?>
+                                           
+                                        </td>
+                                        <td style="text-align:center;">
+                                        <?php echo $row1['m_tel']; ?>
+                                           
+                                        </td>
+                                        <td style="text-align:center;">
                                             
                                         <?php echo $row1['m_email']; ?>
                                                
                                             </a>
-                                        </td>
-                                        <td style="text-align:right;">
-                                        <?php echo $row1['m_tel']; ?>
-                                           
-                                        </td>
-                                        
-                                        <td colspan="2"  style="text-align:center;">
-                                        <?php echo $row1['m_address']; ?>
-                                           
                                         </td>
                                        
                                         </td>
