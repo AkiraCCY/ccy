@@ -79,8 +79,9 @@ $row1 = mysqli_fetch_array($result2);
                                                </a>
                                            </td>
                                         <td>
-                                           
-                                        <img src="backend/p_img/<?php echo $row0['p_img']?> " name="img"  value= "<?php echo $row0['p_img']?> "width="90" height="60">
+                                        <img src="backend/p_img/<?php echo $row0['p_img']?> " name="img"  value= "<?php echo $row0['p_img']?> "width="90" height="60"
+                                        onclick="onClick(this)" class="w3-hover-opacity">   
+                                        
                                             </a>
                                         </td>
                                         <td>

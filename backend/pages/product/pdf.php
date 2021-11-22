@@ -17,8 +17,9 @@
 	}
 
 	
-	$query1= "SELECT * FROM tbl_product as p 
-	INNER JOIN tbl_type  as t ON p.type_id=t.type_id "
+	$query1= " SELECT * FROM tbl_product as p 
+	INNER JOIN tbl_type  as t ON p.type_id = t.type_id 
+	ORDER BY p.p_id DESC" or die("Error:" . mysqli_error());
 	$result1 = mysqli_query($conn,$query1 )or die("Error in query: $query1 ".mysqli_error());
 	$row = mysqli_fetch_array($result1);
 	$content = "";
@@ -31,12 +32,12 @@
 		while($row = mysqli_fetch_assoc($result1)) {
 			$content .= '<tr style="border:1px solid #000;">
 				
-				<td style="border-right:1px solid #000;padding:3px;text-align:center;" >'.$row['p_cord'].'</td>
+				<td style="border-right:1px solid #000;padding:3px;text-align:center;" >'.$row['p_code'].'</td>
 				<td style="border-right:1px solid #000;padding:3px;text-align:center;" >'.$row['type_name'].'</td>
 				<td style="border-right:1px solid #000;padding:3px;text-align:center;"  >'.$row['p_name'].'</td>
-				<td style="border-right:1px solid #000;padding:3px;text-align:center;"  >'.$row['p_detail'].'</td>
+				<td style="border-right:1px solid #000;padding:3px;text-align:center; "  >'.$row['p_detail'].'</td>
 				<td style="border-right:1px solid #000;padding:3px;text-align:center;"  >'.$row['p_quantity'].'</td>
-				<td style="border-right:1px solid #000;padding:3px;text-align:center;"  >'.$row['p_price'].'</td>
+				<td style="border-right:1px solid #000;padding:3px;text-align:center;"  >'.number_format($row['p_price'],2).'</td>
 				
 			</tr>';
 			
@@ -58,23 +59,39 @@ $head = '
 
 
 
- <h2 style="text-align:center">ข้อมูลสมาชิก</h2>
+ <h2 style="text-align:center">รายงานข้อมูลสินค้า</h2>
  <h3 style="text-align:right"><font size = "3">
-
+ <?
+ function DateThai($strDate)
+	 {
+		 $strYear = date("Y",strtotime($strDate))+543;
+		 $strMonth= date("n",strtotime($strDate));
+		 $strDay= date("j",strtotime($strDate));
+		 $strMonthCut = Array("","มกราคม","กุุมภาพันธ์","มีนาคม","เมษายน","พฤษภาคม","มิถุนายน","กรกฎาคม","สิงหาคม","กันยายน","ตุลาคม","พฤศจิกายน","ธันวาคม");
+		 $strMonthThai=$strMonthCut[$strMonth];
+		 return "$strDay $strMonthThai $strYear";
+	 }
+ function thainumDigit($num){
+	 $num);
+ };
  
-
-
+ $strDate = date("Y-m-d"); 
+ $thaidate =  thainumDigit(DateThai($strDate));
+ ?>
 <h5 style="text-align:left"><img src="../../images/tee.png" width=150px >
 
 
 <table id="bg-table" width="100%" style="border-collapse: collapse;font-size:12pt;margin-top:8px;">
     <tr style="border:1px solid #000;padding:4px;">
         
-		<td  style="border-right:1px solid #000;padding:4px;text-align:center;"  width="30%">ชื่อลูกค้า</td>
-	
-		<td  width="20%" style="border-right:1px solid #000;padding:4px;text-align:center;">&nbsp;ที่อยู่</td>
-		<td  style="border-right:1px solid #000;padding:4px;text-align:center;"  width="15%">เบอร์โทร</td>
-		<td  style="border-right:1px solid #000;padding:4px;text-align:center;"  width="15%">e-mail</td>
+		<td  style="border-right:1px solid #000;padding:4px;text-align:center;"  width="10%">รหัสสินค้า</td>
+		<td  style="border-right:1px solid #000;padding:4px;text-align:center;"  width="10%">ประเภทสินค้า</td>
+		<td  style="border-right:1px solid #000;padding:4px;text-align:center;"  width="10%">สินค้า</td>
+		<td  style="border-right:1px solid #000;padding:4px;text-align:center;"  width="8%">รายละเอียดสินค้า</td>
+		<td  style="border-right:1px solid #000;padding:4px;text-align:center;"  width="8%">จำนวนสินค้า</td>
+		<td  style="border-right:1px solid #000;padding:4px;text-align:center;"  width="15%">ราคาสินค้า(บาท)</td>
+
+
         
     </tr>
 
@@ -88,8 +105,8 @@ $end = "</tbody>;
 </table>";
 
 
-
 $mpdf->WriteHTML($head);
+
 
 $mpdf->WriteHTML($content);
 

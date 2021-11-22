@@ -34,6 +34,7 @@
 				<td style="border-right:1px solid #000;padding:3px;text-align:center;" >'.$row['m_address'].'</td>
 				<td style="border-right:1px solid #000;padding:3px;text-align:center;"  >'.$row['m_tel'].'</td>
 				<td style="border-right:1px solid #000;padding:3px;text-align:center;"  >'.$row['m_email'].'</td>
+				<td style="border-right:1px solid #000;padding:3px;text-align:center;"  >'.$row['date_save'].'</td>
 				
 			</tr>';
 			
@@ -55,7 +56,7 @@ $head = '
 
 
 
- <h2 style="text-align:center">ข้อมูลสมาชิก</h2>
+ <h2 style="text-align:center">รายงานข้อมูลสมาชิก</h2>
  <h3 style="text-align:right"><font size = "3">
 
  
@@ -72,6 +73,7 @@ $head = '
 		<td  width="20%" style="border-right:1px solid #000;padding:4px;text-align:center;">&nbsp;ที่อยู่</td>
 		<td  style="border-right:1px solid #000;padding:4px;text-align:center;"  width="15%">เบอร์โทร</td>
 		<td  style="border-right:1px solid #000;padding:4px;text-align:center;"  width="15%">e-mail</td>
+		<td  style="border-right:1px solid #000;padding:4px;text-align:center;"  width="15%">วันที่สมัคร</td>
         
     </tr>
 
