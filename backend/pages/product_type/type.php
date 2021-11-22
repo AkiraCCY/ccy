@@ -110,15 +110,16 @@ table.dataTable thead .sorting_desc:after {
                           <i class="ti-upload btn-icon-prepend"></i>                                                    
                           เพิ่มประเภทสินค้า
                         </button>
+                        <form  name="addproduct" action="pdf.php" method="POST" enctype="multipart/form-data"  class="form-horizontal">
+                  <td colspan="1" style=" text-align: center;">
+                      </br>
+                  <button type="submit" class="btn btn-success" name="btnadd"  style="width:15%;height:50px"> <h4>พิมพ์ข้อมูลประเภทสินค้า</h4> </button>
+                  </br>
+                  </form>
                         </div>    
                     </div>
                   </div>
-                  <form  name="addproduct" action="pdf.php" method="POST" enctype="multipart/form-data"  class="form-horizontal">
-                  <td colspan="1" style=" text-align: center;">
-                      </br>
-                  <button type="submit" class="btn btn-success" name="btnadd"  style="width:100%;height:50px"> <h4>พิมพ์ข้อมูลประเภทสินค้า</h4> </button>
-                  </br>
-                  </form>
+                  
                 </div>
 
                 <div class="row" >

@@ -17,7 +17,8 @@
 	}
 
 	
-	$query1= "SELECT * FROM tbl_type";
+	$query1= "SELECT * FROM tbl_type
+	ORDER BY type_code ASC" or die("Error:" . mysqli_error());
 	$result1 = mysqli_query($conn,$query1 )or die("Error in query: $query1 ".mysqli_error());
 	$row = mysqli_fetch_array($result1);
 	$content = "";
@@ -51,7 +52,7 @@ $head = '
 	}
 </style>
 
-
+<h5 style="text-align:left"><img src="../../images/tee.png" width=150px >
 
  <h2 style="text-align:center">รายงานประเภทสินค้า</h2>
  <h3 style="text-align:right"><font size = "3">
@@ -59,7 +60,7 @@ $head = '
  
 
 
-<h5 style="text-align:left"><img src="../../images/tee.png" width=150px >
+
 
 
 <table id="bg-table" width="100%" style="border-collapse: collapse;font-size:12pt;margin-top:8px;">

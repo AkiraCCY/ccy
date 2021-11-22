@@ -55,14 +55,14 @@ $head = '
 </style>
 
 
-
+<h5 style="text-align:left"><img src="../../images/tee.png" width=150px >
  <h2 style="text-align:center">รายงานข้อมูลสมาชิก</h2>
  <h3 style="text-align:right"><font size = "3">
 
  
 
 
-<h5 style="text-align:left"><img src="../../images/tee.png" width=150px >
+
 
 
 <table id="bg-table" width="100%" style="border-collapse: collapse;font-size:12pt;margin-top:8px;">

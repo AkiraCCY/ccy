@@ -19,7 +19,7 @@
 	
 	$query1= " SELECT * FROM tbl_product as p 
 	INNER JOIN tbl_type  as t ON p.type_id = t.type_id 
-	ORDER BY p.p_id DESC" or die("Error:" . mysqli_error());
+	ORDER BY p.p_id ASC" or die("Error:" . mysqli_error());
 	$result1 = mysqli_query($conn,$query1 )or die("Error in query: $query1 ".mysqli_error());
 	$row = mysqli_fetch_array($result1);
 	$content = "";
@@ -58,27 +58,11 @@ $head = '
 </style>
 
 
-
+<h5 style="text-align:left"><img src="../../images/tee.png" width=150px >
  <h2 style="text-align:center">รายงานข้อมูลสินค้า</h2>
  <h3 style="text-align:right"><font size = "3">
- <?
- function DateThai($strDate)
-	 {
-		 $strYear = date("Y",strtotime($strDate))+543;
-		 $strMonth= date("n",strtotime($strDate));
-		 $strDay= date("j",strtotime($strDate));
-		 $strMonthCut = Array("","มกราคม","กุุมภาพันธ์","มีนาคม","เมษายน","พฤษภาคม","มิถุนายน","กรกฎาคม","สิงหาคม","กันยายน","ตุลาคม","พฤศจิกายน","ธันวาคม");
-		 $strMonthThai=$strMonthCut[$strMonth];
-		 return "$strDay $strMonthThai $strYear";
-	 }
- function thainumDigit($num){
-	 $num);
- };
- 
- $strDate = date("Y-m-d"); 
- $thaidate =  thainumDigit(DateThai($strDate));
- ?>
-<h5 style="text-align:left"><img src="../../images/tee.png" width=150px >
+
+
 
 
 <table id="bg-table" width="100%" style="border-collapse: collapse;font-size:12pt;margin-top:8px;">
