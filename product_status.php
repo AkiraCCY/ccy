@@ -54,7 +54,7 @@ $row1 = mysqli_fetch_array($result2);
                                 <th style="width=10px;text-align:center;">เลขที่ใบสั่งซื้อ</th>
                                    <th style="width=10px;text-align:center;">img</th>
                                    <th style="width=20px;text-align:center;">รหัสสินค้า</th>
-                                    <th style="width=20px;text-align:center;">สินค้า</th>
+                                    <th style="width=10px;text-align:center;">สินค้า</th>
                                     <th style="text-align:center;">ราคา (บาท)</th> 
                                     <th style="text-align:center;">จำนวน (ชิ้น)</th> 
                                     <th style="text-align:center;">ค่าสัดส่ง</th> 
@@ -90,7 +90,7 @@ $row1 = mysqli_fetch_array($result2);
                                           
                                            
                                         </td>
-                                        <td>
+                                        <td style="width=20px;text-align:left;">
                                         <?php echo $row0['p_name']; ?>
                                           
                                            
@@ -106,7 +106,7 @@ $row1 = mysqli_fetch_array($result2);
                                         50 
                                          </td >
                                         
-                                        <td style="width=20px;text-align:right;">
+                                        <td style="width=15px;text-align:right;">
                                         <?php
                                           $sum = $row0["d_quantity"] * $row0["p_price"] + 50;
                                         echo number_format($sum,2); ?>

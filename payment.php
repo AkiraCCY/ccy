@@ -33,7 +33,7 @@ $row1 = mysqli_fetch_array($result);
             <div class="title">
                 <div class="row">
                     <div class="col">
-                        <h4><b>ชำระเงิน</b></h4>
+                        <h4><b>ชำระสินค้า</b></h4>
                         
                     </div>
               
